@@ -1,6 +1,15 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/68644
 def solution(numbers):
     answer = []
+    
+    for i in range(0,len(numbers)-1):
+        for j in range(i+1,len(numbers)):
+            sum = numbers[i] + numbers[j]
+            answer.append(sum)
+           
+    temp_set = set(answer)
+    answer = sorted(list(temp_set))  
+    
     return answer
 
 
