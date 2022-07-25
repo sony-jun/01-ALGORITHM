@@ -4,7 +4,7 @@ import sys
 sys.stdin = open("3_OX퀴즈.txt")
 
 t = int(input())
-for i in range(5):
+for i in range(t):
     a = list(input())
     score = 0 
     c = 1
