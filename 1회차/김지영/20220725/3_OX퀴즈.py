@@ -20,6 +20,7 @@ for test_case in range(T):
         else : 
             c = 0
     print(result)
+
 #     r.append(result)
 # for i in r:
 #     print(i)
