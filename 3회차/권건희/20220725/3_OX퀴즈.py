@@ -2,7 +2,7 @@
 import sys
 
 sys.stdin = open("3_OX퀴즈.txt")
-# cnt+=1을 반복문에 넣고 x가 나오면 리셋되게 하자, 
+# cnt=+1을 반복문에 넣고 x가 나오면 리셋되게 하자, 
 T=int(input())
 
 for i in range(T):
