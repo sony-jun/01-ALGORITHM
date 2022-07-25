@@ -1,11 +1,11 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/68644
 def solution(numbers):
-    answer = set()
+    answer = []
     for i in range(len(numbers)):
         for j in range(i + 1, len(numbers)):
             if numbers[i] + numbers[j] not in answer:
-                answer.add(numbers[i] + numbers[j])
-    answer = list(answer)
+                answer.append(numbers[i] + numbers[j])
+    #answer = list(answer) not in 했으니 중복 제거 하지 않아도 됨!
     answer.sort()
 
     return answer
