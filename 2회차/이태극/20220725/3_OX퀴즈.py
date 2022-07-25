@@ -1,7 +1,7 @@
 # https://www.acmicpc.net/problem/8958
-#import sys
+import sys
 
-#sys.stdin = open("3_OX퀴즈.txt")
+sys.stdin = open("3_OX퀴즈.txt")
 n = int(input())
 
 for _ in range(n):

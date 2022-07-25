@@ -3,9 +3,9 @@ import sys
 
 sys.stdin = open("0_숫자의개수.txt")
 
-a = int(sys.stdin.readline())               
-b = int(sys.stdin.readline())                
-c = int(sys.stdin.readline())       
+a = int(input())               
+b = int(input())                
+c = int(input())       
 
 result = list(str(a * b * c))   
 
