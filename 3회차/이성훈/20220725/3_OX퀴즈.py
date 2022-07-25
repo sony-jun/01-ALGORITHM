@@ -12,7 +12,7 @@ for test_case in range(T):
     # OX 값 입력
     A = input()
     # OX값 한번 확인
-    #print(A)
+    # print(A)
     # OX 값 하나씩 대입
     for i in A:
         # O가 맞으면 1씩 증가
