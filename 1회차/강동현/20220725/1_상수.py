@@ -17,6 +17,6 @@ import sys
 sys.stdin = open("1_상수.txt")
 
 A, B = input().split()
-a = int(A[::-1])
-b = int(B[::-1])
-print(max(a, b))
+a = int(A[::-1]) # 역수
+b = int(B[::-1]) # 역수
+print(max(a, b)) # 둘중에 큰수

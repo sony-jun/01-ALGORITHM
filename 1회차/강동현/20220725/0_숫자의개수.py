@@ -18,12 +18,12 @@ A = int(input())
 B = int(input())
 C = int(input())
 
-multiply = A*B*C
+multiply = A*B*C #곱한수
 check ={
     '0':0,'1':0,'2':0,'3':0,'4':0,'5':0,'6':0,'7':0,'8':0,'9':0
-}
+} # 딕셔너리 만들기
 for i in str(multiply):
     if i in check:
-        check[i] += 1
+        check[i] += 1 #있으면 하나씩 추가
 for k, v in check.items():
-    print(v)
+    print(v) # 출력 
