@@ -14,6 +14,6 @@ for test_case in range(1, t + 1):
             o_cnt += 1 # 콤보가 누적될수록 올라가는 보너스 점수
             score += o_cnt # 누적되어가는 콤보 보너스를 점수에 더함
         if char == 'X':
-            o_cnt = 0 # 오답이 되어 콤보가 끊길 경우 보너스 초기화
+            o_cnt = 0 # 오답이 되어 콤보가 끊길 경우 보너스 초기화89
 
     print(score)
