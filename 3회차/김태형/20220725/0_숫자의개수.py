@@ -8,7 +8,9 @@
 # for j in range(10):
 #     print(str(num).count(str(j)))
 
-A,B,C = map(int,input().split())
+A = int(input())
+B = int(input())
+C = int(input())
 num = A*B*C
 print(num)
 for j in range(10):
