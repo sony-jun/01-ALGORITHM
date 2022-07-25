@@ -1,8 +1,9 @@
-# https://school.programmers.co.kr/learn/courses/30/lessons/68644
 def solution(numbers):
     answer = []
+    answer_set = set()
+    for i in numbers:
+        for j in numbers[numbers.index(i)+1:]:
+            answer_set.add(i+j)
+    answer = list(answer_set)
+    answer.sort()
     return answer
-
-
-print(solution([2, 1, 3, 4, 1]))
-print(solution([5, 0, 2, 7]))
