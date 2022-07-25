@@ -6,8 +6,7 @@ def solution(numbers):
             if i != j:
                 answer.append(numbers[j] + numbers[i])
     
-    removedup = set(answer)
-    answer = list(removedup)
+    answer = list(set(answer))
     answer.sort()
     return answer
 
