@@ -12,10 +12,9 @@ c = int(input())
 d = str(a*b*c) # str함수를 이용하여 문자열로 변환.
 
 for i in range(10): # 0부터 9의 문자를 str(i)의 i값에 할당해야 하므로 -> range(10) 
-    
     print(d.count(str(i))) # str에 i 값을 대입해가면서 숫자들을 count 합니다.
    
-   # for ~ range 쓰지 않고 작성하면 아래와 ㄱ같다. 
+   # for ~ range 쓰지 않고 작성하면 아래와 같다. 
    # print(d.count(str('0')))                       
    # print(d.count(str('1')))
    #.....

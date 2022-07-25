@@ -12,8 +12,10 @@ for a in range(T): # 테스트 케이스 갯수
     
     for i in x: # 문자열 순회
         if i == 'O': # i == 'O'면 
+            
             sum += Correct #  sum에 Correct값을 더해준다.
-            Correct += 1 # 'O'를 만났으므로 correct 값을 1 증가시킨다.
+            Correct += 1
+            # 'O'를 만났으므로 correct 값을 1 증가시킨다.
         else:
             Correct = 1 # 'O'가 아닌경우('X'만난 경우) Correct값을 1로 변경한다.
     print(sum)    
