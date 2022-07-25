@@ -2,3 +2,4 @@
 import sys
 
 sys.stdin = open("3_OX퀴즈.txt")
+
