@@ -1,12 +1,8 @@
 # https://www.acmicpc.net/problem/2908
 
-N, L = map(int,input().split())
-for i in N:
-    D,R,G = map(int,input().split())
-time=0
-if D<R:
-    time+=(R-D)+G
-else:
-    time+=D+G
+A,B=input().split()
 
-print(time)
+if int(A[::-1])>int(B[::-1]):
+    print(int(A[::-1]))
+elif int(A[::-1])<int(B[::-1]):
+    print(int(B[::-1]))
