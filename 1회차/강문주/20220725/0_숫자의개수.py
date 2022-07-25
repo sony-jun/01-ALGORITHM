@@ -5,12 +5,12 @@ num1 = int(input())
 num2 = int(input())
 num3 = int(input())
 
-x_num = list(str(num1 * num2 * num3))
+num_list = list(str(num1 * num2 * num3)) #문자로 변환
 
 answer = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-for num in x_num:
-    answer[int(num)] += 1
+for num in num_list:
+    answer[int(num)] += 1 #num_list값 숫자에 맞는 answer 리스트에 입력
     
 for ans in answer:
     print(ans)
