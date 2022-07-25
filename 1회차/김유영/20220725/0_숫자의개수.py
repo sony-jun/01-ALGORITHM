@@ -10,6 +10,7 @@ C = int(input())
 
 abc = str(A * B * C)
 
+
 # 반복문으로 1부터 9까지의 숫자가 각각 몇 번 쓰였는지 확인
 for i in range(10):
     print(abc.count(str(i)))

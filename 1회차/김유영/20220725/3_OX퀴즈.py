@@ -10,7 +10,7 @@ for oh in range(n):
     a = list(input())
     # 0 일때, 임의의 변수로 카운트한 수를 더함
     for i in a:
-        if i == 'O':
+        if i == 'O': # OX가 O일때
             count += 1
             sum = sum + count
         else:
