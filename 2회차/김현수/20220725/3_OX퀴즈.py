@@ -9,7 +9,7 @@ for n in range(1,T+1):
     answer = input() #O.X만 존재
     score = 0
     result = 0
-    for c in answer:
+    for c in answer: #문자열
         if c == 'O':
             score += 1
             result +=score

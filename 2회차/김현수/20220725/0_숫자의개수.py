@@ -28,7 +28,7 @@ count = [0,0,0,0,0,0,0,0,0,0]
 
 for n in range(len(str(sum))): # 0~9 10회
     count[sum % 10] += 1 #위치값
-    sum //= 10
+    sum //= 10 #사용한숫자 제거 
 
 for i in range(10): #출력
     print(count[i])
