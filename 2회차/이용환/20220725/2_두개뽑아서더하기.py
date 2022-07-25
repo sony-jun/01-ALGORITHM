@@ -1,6 +1,15 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/68644
 def solution(numbers):
-    answer = []
+    answer1 = []
+    for i in range(len(numbers)):
+        for j in range(len(numbers)):
+            if i == j:
+                continue
+            else:
+                X = numbers[i]+ numbers[j]
+                answer1.append(X)
+    answer1.sort()
+    answer = list(set(answer1))
     return answer
 
 
