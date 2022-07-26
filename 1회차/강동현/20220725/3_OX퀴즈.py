@@ -17,14 +17,14 @@ import sys
 
 sys.stdin = open("3_OX퀴즈.txt")
 
-n = int(input())
-for i in range(0, n):
-    cnt, seq = 0, 1
-    set_test = list(input())
-    for j in set_test:
-        if j == 'O':
+n = int(input()) # 테스트케이스
+for i in range(0, n): 
+    cnt, seq = 0, 1 # cnt 는 점수 seq는 연속수
+    set_test = list(input()) # OX입력
+    for j in set_test: # j 는 OX들
+        if j == 'O': # j가 O일때
             cnt += seq
             seq +=1
-        else:
+        else: # j 가 X이면 1로 연속수 초기화/점수로 더하지않음
             seq=1
     print(cnt)
