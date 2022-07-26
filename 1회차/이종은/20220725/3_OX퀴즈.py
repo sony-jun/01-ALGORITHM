@@ -1,5 +1,7 @@
 # https://www.acmicpc.net/problem/8958
 # 연달아 나오는 경우 점수가 1점씩 증가
+# 연속된 o의 개수를 저장할 변수가 필요, 총 점수를 저장할 변수가 필요
+
 import sys
 
 sys.stdin = open("3_OX퀴즈.txt")
