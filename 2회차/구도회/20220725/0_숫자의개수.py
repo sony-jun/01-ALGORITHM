@@ -16,3 +16,7 @@ list_2 = [0 for i in range(0,10)]
 for test_2 in range(0,len(str(result))):
     list_2[int(list_1[test_2])] += 1
 print(*list_2, sep='\n')
+
+# d = list(str(a*b*c))
+# for i in range(10):
+#     print(d.count(str(i)))
