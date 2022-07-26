@@ -8,4 +8,5 @@ def solution(numbers):
                 ans.add(numbers[j] + numbers[i])      # 그래서 단순 숫자가 아닌 리스트의 구성요소를 더하게 했음
     return list(ans)
 
+print(solution([2, 1, 3, 4, 1]))
 print(solution([5,0,2,7]))
