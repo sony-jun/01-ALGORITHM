@@ -12,7 +12,8 @@ for i in range(1,a+1): # 1부터 입력값 a까지 순회 시작
     if a == result: #나의 입력값과 분해합이 같으면
         answer=answer+i # answer에 현재 생성자 값을 넣어준다.
         break #for문 종료
-    
+    if i == N :
+        print(0)
 print(answer) # 생성자 출력
         
     
