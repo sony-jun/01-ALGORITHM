@@ -17,24 +17,32 @@ len_num=int(input())
 n= list (map(int,input().split()))
 
 high=[]
-max_h=n[0]
-min_h=n[0]
+max_count=0
 cnt= n[0]
 for nums in range(0,len_num) :
-    if n[nums] >= cnt:
+    if n[nums] > cnt:
+        max_count += n[nums]-cnt
         cnt = n[nums]
-        max_h = n[nums]
-        
-    elif n[nums]< cnt:
-        high.append(max_h-min_h)
+    elif n[nums]<= cnt:
+        high.append(max_count)
         cnt = n[nums]
-        min_h = n[nums]
-        max_h = n[nums]
-high.append(max_h-min_h)
+        max_count = 0
+    # elif n[nums]== cnt:
+    #     cnt = n[nums]
+high.append(max_count)
     # if cnt ==len_num-1:
     #     break
 
-print(high)
+print(max(high))
 
 #처음높이랑... 내리막에서 내려간 길이는 포함을 안한대요..**연달아 오르는 숫자만 계산을해야하나봐요..
 
+# len_num=int(input())
+# n= list (map(int,input().split()))
+
+# high=[]
+# max_h=n[0]
+# min_h=n[0]
+# cnt= n[0]
+# for nums in range(0,len_num) :
+#     if 
