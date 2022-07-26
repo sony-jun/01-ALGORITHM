@@ -7,3 +7,4 @@ for i in range(1, 6): # 1부터 5까지
         max = tot
         idx = i # 최대값이 있는 인덱스 
 print(idx, max)
+
