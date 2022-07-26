@@ -14,5 +14,3 @@ for i in range(1,n):
     elif a[i] < a[i-1]: #오르막이 아니거나 끝나면
         dif = 0          #차이는 초기화함
 print(max(high))
-    
-
