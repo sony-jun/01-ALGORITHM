@@ -7,16 +7,17 @@ def solution(numbers):
 
     for i in range(len(numbers)):
     # i는 리스트 안에 있는 숫자들의 '인덱스'이다
-        for j in range(i+1, len(numbers)):
+        for j in range(i + 1, len(numbers)):
         # j도 리스트 안에 있는 숫자들의 '인덱스'이지만
         # i+1을 하여, 리스트 안에 있는 인덱스를 1씩 더해준다
+        # 서로 다른 인덱스의 두 수를 뽑아 더하는 것이라서!
             num_set.add(numbers[i] + numbers[j])
             # number[i] 와 number[j]는 '인덱스'의 해당 '값'이다
             # .add()를 통해 num_set에 더해진 숫자들을 넣어준다
-            answer = list(num_set)
-            # set을 list로 변환하기
-            answer.sort()
-            # sort 함수를 써서 오름차순으로 반환해준다
+        answer = list(num_set)
+        # set을 list로 변환하기
+        answer.sort()
+        # sort 함수를 써서 오름차순으로 반환해준다
     return answer
 
 

@@ -139,6 +139,7 @@ else:
          for j in range(i+1, len(numbers)):
          # j도 리스트 안에 있는 숫자들의 '인덱스'이지만
          # i보다 1씩 더 큰 인덱스를 가지고 있는 J
+         # 서로 다른 인덱스의 두 수를 뽑아 더하는 것이라서!
              num_set.add(numbers[i] + numbers[j])
              # number[i] 와 number[j]는 '인덱스'의 해당 '값'이다
              # .add()를 통해 num_set에 더해진 숫자들을 넣어준다
@@ -152,7 +153,10 @@ else:
  print(solution([2, 1, 3, 4, 1]))
  print(solution([5, 0, 2, 7]))
  ```
-
+`for i in range(len(numbers)):` 
+`for j in range(i + 1, (len(numbers))):`
+- 서로 다른 인덱스에 있는 두 수를 더하기 때문에 `for J` 문에 `i + 1`을 한다
+- 만약에 `i + 1`이 없다면, 같은 인덱스 수까지 같이 더해준다
 
 
 ## OX퀴즈
