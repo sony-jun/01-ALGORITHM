@@ -1,6 +1,6 @@
 result = []
 for i in range(5):
-    A = list(map(int,input().split()))
+    A = map(int,input().split())
     B = sum(A)
     result.append(B)
 tmp = max(result)
