@@ -4,17 +4,19 @@
 # 예를 들어, 높이가 다음과 같은 길이 있다고 하자. 12 3 5 7 10 6 1 11. 이 길에는 2 개의 오르막길이 있다. 밑 줄로 표시된 부분 수열이 오르막길이다. 첫 번째 오르막길의 크기는 7이고, 두 번째 오르막길의 크기는 10이다. 높이가 12와 6인 곳은 오르막길에 속하지 않는다.
 # 가장 큰 오르막길을 구하는 프로그램을 작성하시오.
 
-len_ = int(input())
-total = 0
-Moa = list(map(int,(input().split())))
-for i in range(1, len_+1):
-    for idx in range(i+1 ,len_):
-        count = 0
-        if Moa[idx-1] < Moa[idx]:
-            count += Moa[idx] - Moa[idx-1]
-            total += count
-        elif Moa[idx-1] > Moa[idx]:
-            count = 0
-print(total)
 
+
+
+len_ = int(input())
+Moa = list(map(int,(input().split())))
+li = []
+count = 0
+for idx in range(1, len_):
+    if Moa[idx-1] < Moa[idx]:
+        count += Moa[idx] - Moa[idx-1]
+        li.append(count)
+    elif Moa[idx-1] >= Moa[idx]:
+        count = 0
+
+print(0) if len(li) == 0 else print(max(li))
 
