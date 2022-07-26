@@ -1,7 +1,7 @@
 def solution(lst):
     answer = []
     for i in range(len(lst)):
-        for j in range(i + 1,len(lst)):
+        for j in range(i + 1 ,len(lst)):
             k = lst[i] + lst[j]
             if k not in answer:
                 answer.append(k)
