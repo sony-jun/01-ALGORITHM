@@ -1,4 +1,5 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/68644
+
 def solution(numbers):
     n_list=numbers
     answer = []
@@ -8,6 +9,7 @@ def solution(numbers):
 
     result = list(set(answer))
     result.sort()
+
     return result
 
 
