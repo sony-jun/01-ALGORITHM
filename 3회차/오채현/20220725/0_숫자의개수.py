@@ -9,5 +9,5 @@ c = int(input())
 
 total = str(a * b * c)
 
-for i in range(10):
+for i in range(10): #0부터 9까지 count로 세기
     print(total.count(str(i)))
