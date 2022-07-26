@@ -19,8 +19,8 @@ res = []
 h = 0
 
 for i in range(1, N):
-    if Pi[i]>Pi[i-1]:
-        h+= Pi[i]-Pi[i-1]
+    if Pi[i] > Pi[i-1]:
+        h+= Pi[i] - Pi[i-1]
         if i == N-1:
             res.append(h)
     else:
