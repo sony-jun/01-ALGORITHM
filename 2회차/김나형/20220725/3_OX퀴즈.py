@@ -9,14 +9,12 @@ sys.stdin = open("3_OX퀴즈.txt")
 # OX퀴즈의 결과가 주어졌을 때, 점수를 구하는 프로그램을 작성하시오.
 
 T = int(input())
-cnt = 0
-cnt_O = 0
+
 
 for score in  range(T):
     ox = input()
-    cnt = 0
     cnt_O = 0
-
+    cnt = 0
     for i in ox:
         if i == 'O':
             cnt += 1
