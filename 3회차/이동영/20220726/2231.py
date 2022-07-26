@@ -19,8 +19,3 @@ if len(bunhaehab_list) == 0:
     print(0)           
 else:
     print(min(bunhaehab_list))
-        
-    
-                
-    
-    
