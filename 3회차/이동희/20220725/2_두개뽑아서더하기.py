@@ -1,4 +1,5 @@
 def solution(numbers):
+    print(type(numbers))
     answer = []
     answer_set = set()
     for i in numbers:
