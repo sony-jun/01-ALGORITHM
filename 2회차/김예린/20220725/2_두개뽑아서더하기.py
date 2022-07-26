@@ -8,8 +8,8 @@ def solution(numbers):
                                     # i보다 들여써져 있기 때문에 j값이i i보다 먼저 더해지며 인덱스 위치를 바꾼다.
             answer.append(numbers[i] + numbers[j]) # 서로 다른 위치의 인덱스 값을 계속해서 더해주며, 
                                                    # answer 리스트에 더해준 값을 넣는다. 
-    answer = set(answer)
-    return sorted(answer)
+    answer = set(answer)    # answer 리스트의 중복 제거
+    return sorted(answer)   # answer 리스트의 정렬
 
 print(solution([2, 1, 3, 4, 1]))
 print(solution([5, 0, 2, 7]))

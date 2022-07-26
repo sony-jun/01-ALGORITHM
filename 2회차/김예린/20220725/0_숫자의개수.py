@@ -19,3 +19,12 @@ print(result.count('8'))
 print(result.count('9'))
 
 sys.stdin = open("0_숫자의개수.txt")
+
+#개선.ver
+a = int(input())
+b = int(input())
+c = int(input())
+result = list(str(a * b * c)) #a*b*c의 값을 문자열로 변환한 리스트를 result에 넣어준다. 
+
+for i in range(10): #0-9까지 i에 넣어준다. 
+    print(result.count(str(i)))

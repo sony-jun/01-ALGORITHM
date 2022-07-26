@@ -11,7 +11,7 @@ for i in range(n - 1):                 # if 문에 [i+1]로 다음 값과 비교
     if nums[i] < nums[i + 1]:          # 만약 다음 인덱스 값이 크다면
         cnt += (nums[i + 1] - nums[i]) # 빼줘서 cnt에 값을 넣는다. 
 
-    if nums[i] >= nums[i + 1]:         # 만약 다음 인덱스가 같거나 작다면 (오르막길이 아닐 경우)
+    else:         # 만약 다음 인덱스가 같거나 작다면 (오르막길이 아닐 경우)
         result.append(cnt)             # 위 cnt값(인덱스를 빼준 값)을 result에 넣어주고 
         cnt = 0                        # cnt는 0으로 초기화한다. 
                                        # 두 번째 if문에서 cnt(빼준)값을 result에 넣는 이유는 더 큰 오르막길이 있을 경우를 위함
