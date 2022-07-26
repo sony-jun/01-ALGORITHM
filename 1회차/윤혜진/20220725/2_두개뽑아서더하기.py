@@ -29,7 +29,7 @@ def solution(numbers):
         for j in range(i + 1, len(numbers)):
             answer.add(numbers[i] + numbers[j])   # 선택한 두 값을 더해서 answer 변수에 값 추가
   
-    return sorted(answer)   # 정렬한 후 값 반환
+    return sorted(list(answer))   # 정렬한 후 값 반환
 
 
 print(solution([2, 1, 3, 4, 1]))
