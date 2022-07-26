@@ -1,7 +1,7 @@
 # https://www.acmicpc.net/problem/2908
-import sys
+# import sys
 
-sys.stdin = open("1_상수.txt")
+# sys.stdin = open("1_상수.txt")
 
 a, b = input().split()
 reverse_a = int(a[::-1])
