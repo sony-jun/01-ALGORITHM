@@ -1,4 +1,4 @@
-A, B = map(int, input().split()) # split()해주고 map()을 통해 a,b를 int로 형변환
+A, B = map(int, input().split()) # split()해주고 map()을 통해 A, B를 int로 형변환
 
 for i in range(1, max(A, B)):
     if A % i == 0 and B % i == 0: # 공약수 중 가장 큰 수 = 최대공약수
