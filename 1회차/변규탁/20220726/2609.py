@@ -13,3 +13,6 @@ def gcd(x, y):
 x, y = map(int, input().split())
 print(gcd(x, y))
 print(x*y//gcd(x,y))
+
+
+# 따로 구현하려고 하지않고 구글로 찾았습니다.......

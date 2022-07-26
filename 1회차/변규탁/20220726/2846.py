@@ -17,4 +17,5 @@ for i in range(1, n):
 
 print(max(height_list))
     
-        
+
+# 내가 생각하는것을 컴퓨터가 이해할 수 있도록 차근차근 코드짜기..
