@@ -1,12 +1,13 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/68644
 def solution(numbers):
-    answer1 = []
+    answer = []
+    set_ = set()
     for i in range(len(numbers)):
         for j in range(i+1, len(numbers)):
             X = numbers[i]+ numbers[j]
-            answer1.append(X)
-    answer1.sort()
-    answer = list(set(answer1))
+            set_.add(X)
+    list_ = list(set_)
+    answer = sorted(list_)
     return answer
 
 
