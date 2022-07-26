@@ -9,9 +9,9 @@ C = int(input())
 
 number = str(A*B*C)
 
-num_list = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+num_list = [0, 0, 0, 0, 0, 0, 0, 0, 4, 0]  # 0 ~  9 = 리스트 인덱스 자리수와 동일 (민석이문제)
 
-for num in number:
+for num in number: 
     num_list[int(num)] += 1
 
 for num in num_list:
