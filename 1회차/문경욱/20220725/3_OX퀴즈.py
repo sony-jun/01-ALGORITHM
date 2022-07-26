@@ -2,8 +2,8 @@
 # 테스트 케이스를 입력 받음
 T = int(input())
 
-# 테스트 케이스만큼 반복
-for test_case in range(T):
+'''
+for test_case in range(T): # 내 풀이 - count_o를 이용해서 
     # O와 X 문자열을 ans로 입력받음
     ans = input()
     # o를 집어넣을 o_list를 선언
@@ -39,3 +39,26 @@ for test_case in range(T):
                 sum_tmp = 0
                 o_list = []
     print(sum_num)
+'''
+import sys
+sys.stdin = open('input.txt')
+
+T = int(input())
+O = 'O' # 고정된 입력값을 변수로 미리 저장
+X = 'X' # 소문자로 입력할 경우 컴퓨터에서 알려줌!
+
+for t in range(T):
+    ox = input()
+    count_o = 0
+    sum_ = 0
+
+    for answer in ox:
+        if answer == O:
+            count_o += 1 # 연석된 O의 개수를 증가
+            sum_ = count_o + sum_
+
+        if answer == X :
+        # else: # O or X라 사용가능하지만 조건을 좀 더 명확히 하기 위함.
+            count_0 = 0 ## 연속된 0의 개수를 초기화(0)
+
+    print(sum_)
