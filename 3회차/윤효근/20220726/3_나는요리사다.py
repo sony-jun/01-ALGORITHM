@@ -1,7 +1,7 @@
 
 import sys
 
-sys.stdin = open("0_최대공약수와 최소공배수.txt")
+sys.stdin = open("3_나는요리사다.txt")
 
 result =[]
 for i in range(5):

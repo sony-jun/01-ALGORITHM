@@ -1,6 +1,6 @@
 import sys
 
-sys.stdin = open("0_최대공약수와 최소공배수.txt")
+sys.stdin = open("2_오르막길.txt")
 
 a = int(input())
 b =list(map(int,input().split()))
