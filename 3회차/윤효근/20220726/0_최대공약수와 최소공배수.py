@@ -6,7 +6,7 @@ a,b = map(int, input().split())
 GCD = 0
 tmp =a
 tmp1=b
-while True:
+while True: #유클리드 호제법
     r = tmp % tmp1
     if r == 0:
         GCD = tmp1
