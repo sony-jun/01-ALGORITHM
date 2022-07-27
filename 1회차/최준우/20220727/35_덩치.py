@@ -7,10 +7,11 @@
 
 N = int(input())
 people_list = [] # 덩치 정보를 담을 리스트
-result = [1, 1, 1, 1, 1] # 등수 결과를 담을 리스트 초기값을 1등으로 해놓은 상태.
+result = [] # 등수 결과를 담을 리스트
 # N번만큼의 사람들의 덩치정보를 input으로 받는다.
 for i in range(N):
     people_list.append(list(map(int, input().split())))
+    result.append(1) # 정보를 받을때 마다 기본등수를 1로 저장해줬다.
 # for문으로 덩치 크기를 비교하고 자신이 몇등인지를 저장한다.
 # 나의 키, 몸무게가 다 작으면 내 등수를 +1
 for i in range(0,N-1):
@@ -20,5 +21,5 @@ for i in range(0,N-1):
         elif people_list[i][0] > people_list[j][0] and people_list[i][1] > people_list[j][1]:
             result[j] += 1
 # 답 출력       
-for i in range(0, len(result)):
-    print(result[i], end =' ')
+for i in result:
+    print(i, end =' ')

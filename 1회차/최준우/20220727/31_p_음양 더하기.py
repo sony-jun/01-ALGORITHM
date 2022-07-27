@@ -2,7 +2,7 @@
 
 def solution(absolutes, signs):
     answer = 0
-    
+    # for문으로 순회하면서 singns[i]가 참이면 answer에 더하기, 거짓이면 빼준다
     for i in range(len(absolutes)):
         if signs[i]:
             answer += absolutes[i]

@@ -7,7 +7,7 @@ def abs_num(number): # 절대값함수 구현
         return -number
 
 sum_score = 0 # 점수들을 쭉 더해나갈 변수
-score =0 # 점수를 하나하나 input으로 받을 변수
+score = 0 # 점수를 하나하나 input으로 받을 변수
 flag = -1 # 점수의 합이 100이상일때와 아닐때를 구분하려고 만든 flag변수
 
 for i in range(10):
