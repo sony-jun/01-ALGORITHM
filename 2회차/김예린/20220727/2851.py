@@ -1,5 +1,6 @@
 # 슈퍼마리오
 
+# 방법 1
 mushrooms =[]                       # 입력값을 저장할 리스트
 result = 0                          # 더한 값을 저장할 변수
 
@@ -23,4 +24,18 @@ for j in range(10) :                # 10개의 버섯을 반복해서 더해주�
     
 else:                               # 다 더해도 100을 넘지 않으면 그 값을 그냥 출력한다. 
     print(result)
-    
+
+
+# 방법 2
+for i in range(1, 11):
+    score = int(input())
+    before_result = result
+
+    result += score
+
+    if result >= 100:
+        if (result - 100) > (100 - before_result):
+            result = before_result
+        break
+
+print(result)
