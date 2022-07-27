@@ -12,3 +12,18 @@ for i in range(1, n): #1부터 n-1까지의 숫자들
         l.append(tmp)
         tmp=0 #tmp를 0으로 초기화
 print(max(l))
+
+# 예시
+
+# n = int(input()) #반복할 횟수
+# arr = list(map(int,input().split())) #리스트로 값을 입력받음
+# start,end = arr[0],arr[0] 
+# answ = 0
+# for i in range(1,n):
+#     if end >= arr[i]: #뒤에 수가 앞에 수보다 작은 경우 start, end를 뒤에 수로 설정
+#         start = arr[i]
+#         end = arr[i]
+#     else:
+#         end = arr[i] #뒤에 수가 앞에 수보다 큰경우 end를 뒤에 수로 설정
+#     answ = max(answ,end-start)  #차이값이 큰 수를 answ에 넣는다
+# print(answ)
