@@ -3,7 +3,6 @@ import sys
 
 sys.stdin = open("3_슈퍼_마리오.txt")
 
-
 sum_ = 0
 
 for i in range(10) :

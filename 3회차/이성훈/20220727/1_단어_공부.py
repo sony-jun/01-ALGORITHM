@@ -1,6 +1,5 @@
 # https://www.acmicpc.net/problem/1157
 import sys
-
 sys.stdin = open("1_단어_공부.txt")
 
 T_list = []
