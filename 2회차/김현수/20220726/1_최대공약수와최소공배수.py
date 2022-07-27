@@ -18,7 +18,7 @@ b_ = []
 c_ = 1 #최대공약수
  #최소공배수 = a * b /최대공약수
 count_a = 2
-while a != 1: #a의 약수 구하기
+while a != 1: #a인수분해
     if a % count_a == 0:
         a_.append(count_a)
         a = a / count_a
@@ -26,13 +26,14 @@ while a != 1: #a의 약수 구하기
         count_a += 1
 
 count_b = 2
-while b != 1: #b의 약수 구하기
+while b != 1: #b인수분해
     if b % count_b == 0:
         b_.append(count_b)
         b = b / count_b
     else:
         count_b += 1
-
+print('a인수분해:', a_)
+print('b인수분해:', b_)
 for i in range(len(a_)): #최대공약수 구하기
     for j in range(len(b_)):
         if a_[i] == b_[j]:
@@ -40,5 +41,19 @@ for i in range(len(a_)): #최대공약수 구하기
             b_[j] = 1 
             break
 
-print(c_)
-print(int(a_1*b_1/c_))
+print('최대공약수:',c_)
+print('최소공배수:',int(a_1*b_1/c_))
+
+# def GCD_(a, b):
+#     while b != 0:
+#         remainder_ = a % b
+#         a = b
+#         b = remainder_
+#     return a
+ 
+# def LCM_(a, b):
+#     LCM__ = (a * b) / GCD_(a, b)
+#     return LCM__
+ 
+# print(GCD_(a, b))
+# print(int(LCM_(a, b)))
