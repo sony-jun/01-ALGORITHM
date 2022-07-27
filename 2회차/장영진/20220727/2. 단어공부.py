@@ -10,4 +10,4 @@ if cnt_list.count(max(cnt_list)) > 1:
     print('?')
 else:
     max_result = cnt_list.index(max(cnt_list))
-    print(cnt_list.index(max_result))
+    print(t_list[max_result])
