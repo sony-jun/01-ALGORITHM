@@ -1,6 +1,6 @@
 import sys
 
-sys.stdin = open("7_input.txt")
+sys.stdin = open("07_input.txt")
 cooks = []
 
 for i in range(5):

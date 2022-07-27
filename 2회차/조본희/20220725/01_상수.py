@@ -1,7 +1,7 @@
 # https://www.acmicpc.net/problem/2908
 import sys
 
-sys.stdin = open("1_상수.txt", "r")
+sys.stdin = open("01_상수.txt", "r")
 
 A, B = map(str, input().split())
 
