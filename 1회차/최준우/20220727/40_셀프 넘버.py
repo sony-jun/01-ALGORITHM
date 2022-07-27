@@ -8,6 +8,6 @@ for i in range(1, 10001): # 1~10000
         i += int(j)
     generator.add(i)
 
-self_number = sorted(N - generator) # 전체 수에서 생성자를 제외한 셀프넘버를 저장한다.
+self_number = sorted(N - generator) # 전체 수에서 생성자가있는 숫자를 제외한 셀프넘버를 저장한다.
 for i in self_number: # 출력한다.
     print(i)
