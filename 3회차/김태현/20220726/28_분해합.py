@@ -1,18 +1,17 @@
 
 import sys
 sys.stdin = open("28_분해합.txt", "r")
+
 N = int(input())
 
-#자릿수 구하기
-def BHH(num):
+#1부터 N까지 분해합 탐색
 
-    result = []
-    cnt = 0
+for num in range(1, N):
+    BHH = num + sum(map(int, str(num)))
 
-    while N:
-        result.append(N % 10)
-        N //= 10
-        cnt += 1
-    
-    return cnt, result
+    if BHH == N:
+        print(BHH)
+        break
 
+else:
+    print(0)
