@@ -2,7 +2,7 @@ N = int(input())
 
 # 방법1
 sum_ = 0 # 더해진 값 그냥 사용하면 오류나서 초기값 설정해줬음
-for i in range(1, N +1):
+for i in range(1, N + 1):
     A = list(map(int, str(i))) # N까지 입력된 수를 문자열로 바꾸고 리스트로 바꿈
     # print(A) # 1부터 N까지 리스트로 출력됨
     # print(sum(A)) # 각 자리수의 합이 더해짐
