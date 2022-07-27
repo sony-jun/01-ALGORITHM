@@ -5,6 +5,7 @@
 import sys
 sys.stdin = open("/Users/yuyeong/Desktop/알고리즘/01-ALGORITHM/1회차/김유영/20220726/4_최대공약수와 최소공배수.txt")
 
+# 유클리드 호제법
 # a와 b의 최대공약수 = b와 r의 최대공약수
 # 예시) 1071과 1029의 최대공약수를 구할때,
 # 1071%1029 == 42
@@ -14,7 +15,6 @@ sys.stdin = open("/Users/yuyeong/Desktop/알고리즘/01-ALGOR
 
 a, b = map(int, input().split())
 A, B = a, b # 두 정수 a,b를 입력 받음
-
 
 while b != 0:     # b가 0이 되었을 때 최대공약수를 구할 수 있음
     a = a % b     # a와 b의 최대공약수
