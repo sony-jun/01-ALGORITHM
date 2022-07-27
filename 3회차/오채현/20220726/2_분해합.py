@@ -18,3 +18,17 @@ def n_find(m):
 
 n = int(input())
 print(n_find(n))
+
+##다른 풀이
+
+# N = int(input())
+
+# for i in range(1,N+1):
+#     resolve_sum = i
+#     for j in range(len(str(i))):
+#         resolve_sum += int(str(i)[j])
+#     if resolve_sum == N:
+#         print(i)
+#         break
+# else:
+#     print(0)
