@@ -8,6 +8,16 @@ for i in word:
         alp[i] = 1
     elif i in alp:
         alp[i] += 1
-print(alp)
-for j in alp[key]:
-    print(j)
+
+# print(alp)
+ze = 0
+for k,v in alp.items():
+    if v > ze:
+        ze = v
+        answer = k
+    elif v == ze:
+        ze = v
+        answer = '?'
+    else:
+        continue
+print(answer)   
