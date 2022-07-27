@@ -15,3 +15,6 @@ for _ in range(n):
         else:
             score = 0
     print(sum_score)
+
+    #OOOOXOOOOXOOOOX
+    #30
