@@ -16,3 +16,4 @@ for ii in range(q) :
         elif a[i] == "X":
             cnt = 0
     print(score)
+print(range(0,10))
