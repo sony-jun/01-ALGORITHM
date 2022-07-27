@@ -5,20 +5,16 @@
 # 마리오는 받은 점수의 합을 최대한 100에 가깝게 만들려고 한다.
 
 # 버섯의 점수가 주어졌을 때, 마리오가 받는 점수를 출력하는 프로그램을 작성하시오.
-from tkinter import scrolledtext
 
 
-point = []
+
+
+ans, score = 0,0
 for i in range(10):
-    N = int(input())
-    point.append((N))
-count = 0
-counts = 0
-for idx in range(0, 10):
-    count += point[idx]
-    if 100 - counts >= abs(100 - count):
-        counts = count
-print(counts)
+    score+=int(input())
+    if 100-ans >= abs(100-score): # = 을 넣어야 절댓값이 같을 시 최대 총점 출력이 가능
+        ans = score
+print(ans)
 
 #100에서 count를 빼준 값이 작을 수록 가까움(절대값기준!)
 #성공
