@@ -10,19 +10,20 @@ for i in range(10):
     N = int(input())
     point.append((N))
 count = 0
-for idx in range(1, 11):
-    count += point[idx-1]
-    A = 100 - (count + point[idx])
-    B = 100 - count
-    if idx == 10:
-        if A < B:
-            print(count)
+counts = 0
+for idx in range(0, 10):
+    count += point[idx]
+    A = 100 - count
+    B = 100 - counts
+    counts += point[idx]
+    if count == 100:
+        break
     elif abs(A) > abs(B):
         break
 print(count)
 
-#100에서 count를 빼준 값이 작을 수록 가까움
-#실패 내일 다시 봐야할듯...
+#100에서 count를 빼준 값이 작을 수록 가까움(절대값기준!)
+#성공
 
 
 
