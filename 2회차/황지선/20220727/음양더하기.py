@@ -11,12 +11,12 @@
 
 
 def solution(absolutes, signs):
-    absolutes = list(int, input().split())
-    signs = list(input().split())
+    answer = 0
 
+    for i in range(len(absolutes)):
+        if signs[i]:
+            answer += absolutes[i]
+        else:
+            answer -= absolutes[i]
     
-
-
-
-    answer = 123456789
     return answer
