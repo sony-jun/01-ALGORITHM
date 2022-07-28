@@ -20,3 +20,15 @@
 #출력
 #여러분은 입력에 나열된 사람의 덩치 등수를 구해서 그 순서대로 첫 줄에 출력해야 한다. 
 #단, 각 덩치 등수는 공백문자로 분리되어야 한다.
+
+import sys
+sys.stdin = open('4_덩치.txt', 'r')
+
+N = int(input())
+weight_and_height = []
+for i in range(N):
+    weight_and_height.append(list(map(int, input().split())))
+
+for i in range(N):
+    for j in range(2):
+        if weight_and_height[i][j]
