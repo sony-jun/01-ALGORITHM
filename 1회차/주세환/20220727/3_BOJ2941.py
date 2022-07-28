@@ -15,12 +15,12 @@ b = []
 for i in cro_word:
     while i in word :
         a.append(i)
-        word = word.replace(i,"",1)
+        word = word.replace(i," ",1)
 for j in a:
         word = word.replace(j,"")
         b.append(word)
     
-for x in b[-1]:
+for x in b[-1].replace(" ",""):
     a.append(x)
 
 print(len(a))
