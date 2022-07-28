@@ -11,3 +11,4 @@ result = list(str(A * B * C))
 
 for mul in range(0, 10):
     print(result.count(str(mul)))
+# 숫자 하나당 0부터9까지 돌면서 겹치는 수가 있으면 해당 수에 카운트

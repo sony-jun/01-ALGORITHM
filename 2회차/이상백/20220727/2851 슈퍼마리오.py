@@ -11,4 +11,23 @@
 # 출력
 # 첫째 줄에 마리오가 받는 점수를 출력한다. 만약 100에 가까운 수가 2개라면 (예: 98, 102) 마리오는 큰 값을 선택한다.
 
-a, b, c, d, e, f, g, h, i, j= map(int, input().split(), end='/n')
+
+mush_point = [int(input()) for i in range(10)]  # 버섯 10개의 점수를 받는다.
+result = 0 # 먹은 버섯의 합계
+
+
+for j in range(len(mush_point)):
+  result += mush_point[j] # 반복문으로 먹은 순서대로 총점을 더해주고
+  if result == 100: # 먹은 버섯의 합계가 100이면 반환 및 실행 종료
+      print(100)
+      break
+      
+  elif result > 100: # 먹은 버섯의 합계가 100이면 반환 및 실행 종료
+      cur = result # 현재까지 먹은 버섯의 합계
+      prev = result - mush_point[j] # 이전까지 먹은 버섯의 합계
+      if abs(100 - cur) <= abs(100 - prev): # abs()함수로 100 기준 절대값 비교
+          print(cur)
+          break
+      else:
+          print(prev)
+          break
