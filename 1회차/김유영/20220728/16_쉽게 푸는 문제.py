@@ -12,4 +12,4 @@ for i in range(1, B+1):
     for j in range(i):
         arr.append(i)
 print(arr[A-1:B])
-# print(sum(arr[A-1:B]))
+# print(sum(arr[A:B])) # 3,3,3,4
