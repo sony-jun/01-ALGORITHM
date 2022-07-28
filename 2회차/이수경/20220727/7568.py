@@ -22,7 +22,7 @@ for i in range(N):
 # Step 2.
 for i in range(N):
     count = 0
-    for j in range(N):    # M번째 학생과 M+1 학생의 [몸무게 and 키] 모두를 비교!
+    for j in range(N):    # i번째 학생과 j 학생의 [몸무게 and 키] 모두를 비교!
         if data[i][0] < data[j][0] and data[i][1] < data[j][1]:
             count += 1          # i번째 학생보다 j번째 학생이 덩치크면 count + 1 !
                                 # i번째 학생보다 덩치 큰 j번째 학생들이 많으면 그만큼 count +1 횟수도 증가
