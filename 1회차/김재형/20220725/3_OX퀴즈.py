@@ -5,21 +5,21 @@ sys.stdin = open("3_OX퀴즈.txt")
 
 # for문 돌려서 O가 나오면 등차로 
 
-T = int(input())
+# T = int(input())
 
-for a in range(1, T+1):
-    OX = input()
-    a = 0
-    b = 0
-    for i in range(len(OX)):
-        if OX[i] == 'O':
-            a += 1
-            b += a
-#print(b)
-        elif OX[i] == 'X':
-            a = 0
-            # b += a
-    print(b)
+# for a in range(1, T+1):
+#     OX = input()
+#     a = 0
+#     b = 0
+#     for i in range(len(OX)):
+#         if OX[i] == 'O':
+#             a += 1
+#             b += a
+# #print(b)
+#         elif OX[i] == 'X':
+#             a = 0
+#             # b += a
+#     print(b)
     
 # import sys
 # sys.stdin = open("3_OX퀴즈.txt")
@@ -45,3 +45,20 @@ for a in range(1, T+1):
 #     r.append(result)
 # for i in r:
 #     print(i)
+
+# ===============================
+
+T = int(input())
+
+# for문으로 T만큼 반복하는데
+for i in range(T):
+    OX = input()
+    a = 0
+    b = 0
+    for w in OX:
+        if w == 'O':
+            a += 1
+            b += a
+        else:
+            a = 0
+    print(b)

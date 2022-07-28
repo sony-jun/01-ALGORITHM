@@ -52,3 +52,42 @@ else:
 # #둘 중 큰 수 출력
 # #print(a) if a > b else print(b)
 # print(a if a > b else b)
+
+# ==============================================
+
+A, B = map(int, input().split())
+#print(A,B) 734 893
+
+# 원래는 734 < 893
+# 상수는 숫자를 거꾸로 읽는다. -> 437 > 398
+
+# 입력받은 숫자 거꾸로 뒤집어서 더 큰 수 출력
+
+# 1. reverse
+ls_A = []
+ls_B = []
+
+for i in str(A):
+    ls_A.append(i) 
+for j in str(B):
+    ls_B.append(j)
+#print(ls_A, ls_B) ['7', '3', '4'] ['8', '9', '3']
+# 거꾸로 뒤집으려면 7 * 1, 3 * 10, 4 * 100을 더해도 되니까
+a = 1
+b = 1
+sum_ = 0
+sum_2 = 0
+for num in ls_A:
+    sum_ = sum_ + int(num) * a
+    a *= 10
+#print(sum_) #437
+for num2 in ls_B:
+    sum_2 = sum_2 + int(num2) * b
+    b *= 10
+# print(sum_2) # 398
+# if sum_ > sum_2:
+#     print(sum_)
+# else:
+#     print(sum_2)
+# 3항연산자
+print(sum_) if sum_ > sum_2 else print(sum_2)

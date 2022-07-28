@@ -14,4 +14,6 @@ for x in range(1,N+1): # 1부터 N까지 돌면서
         x_sum = 0  # 각 자리수 합 초기화
     if x + x_sum == N:
         print(x)
-        break
+        break # 가장 작은 생성자를 구하라 했으니까 
+else:
+    print(0)

@@ -35,3 +35,26 @@ for key, val in count.items():
 # mul_str = str(mul)
 # for i in range(10):
 # 	print(mul_str.count(str(i)))
+
+#================================
+
+# #mul값을 str로 변환
+# #딕셔너리 키값에 삽입
+# #밸류에 갯수 삽입
+# #밸류 출력
+# A = int(input())
+# B = int(input())
+# C = int(input())
+
+# mul = A*B*C #17037300
+# str_mul = str(mul)
+# dict_mul = {}
+
+# for num in range(10):
+#     dict_mul[num] = 0
+# #print(dict_mul) {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0}
+# for i in str_mul:
+#     dict_mul[int(i)] += 1
+# #print(dict_mul) {0: 3, 1: 1, 2: 0, 3: 2, 4: 0, 5: 0, 6: 0, 7: 2, 8: 0, 9: 0}
+# for val in dict_mul.values():
+#     print(val)
