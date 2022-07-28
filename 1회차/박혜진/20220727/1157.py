@@ -11,3 +11,4 @@ if cnt.count(max(cnt)) >= 2 :
 
 else :
   print(word_list[(cnt.index(max(cnt)))])
+  
