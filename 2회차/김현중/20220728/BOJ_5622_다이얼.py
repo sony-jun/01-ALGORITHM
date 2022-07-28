@@ -6,5 +6,5 @@ for i in call_num:                                 # 할머니의 문자를 하�
         if i in dial[j]:                           # 리스트를 순회하면서 리스트 안의 문자열도 순회함
             result += j+3                          # 할머니 문자 == 리스트 문자 >> 해당 인덱스 넘버 + 3 만큼의 시간 추가
     
-print(result)                                      # 시간 출력.
+print(result)                                      # 시간 출력. ABC 2번  1번 2초// 2번 3초 list[0] << 0 + 3 , 3번 4초가 4초//
 
