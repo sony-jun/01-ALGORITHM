@@ -21,3 +21,5 @@ for i in croa3_alpha:
 croa_len = word_len - sum(m2) - sum(m3)
 
 print(croa_len)
+
+## replace 도 사용해서 풀어봐!
