@@ -8,7 +8,7 @@ for _ in range(10):
     b = namugi % 42
     c.append(b)
     
-     
-print(set(len(c)))
+s = set(c) 
+print(len(s))
 
 
