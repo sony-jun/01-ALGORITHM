@@ -11,12 +11,13 @@ len_ = int(input())
 Moa = list(map(int,(input().split())))
 li = []
 count = 0
+print(li)
 for idx in range(1, len_):
     if Moa[idx-1] < Moa[idx]:
         count += Moa[idx] - Moa[idx-1]
         li.append(count)
     elif Moa[idx-1] >= Moa[idx]:
         count = 0
-
+print(li)
 print(0) if len(li) == 0 else print(max(li))
 

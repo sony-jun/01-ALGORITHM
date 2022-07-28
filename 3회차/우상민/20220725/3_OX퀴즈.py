@@ -15,3 +15,4 @@ for R in range(1, T+1):
         else:
             count = 0         
     print(total)
+    # 조원들과 이야기 한 결과 counts를 total로 바꿔 알기 쉽게 만듬

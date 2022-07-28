@@ -10,12 +10,12 @@ for i in range(len(N)):
         li.append(chr(first_-32))
     else:
         li.append(chr(first_))
-
 count_ = {}
 for idx in li:
     try: count_[idx] += 1
     except: count_[idx] = 1
 MX = list(count_.values())
+
 if MX.count(max(MX)) > 1:
     print('?')
 else:

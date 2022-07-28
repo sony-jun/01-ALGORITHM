@@ -10,3 +10,5 @@ for M in range(N):
         result = M
         break
 print(result)
+
+
