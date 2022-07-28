@@ -5,10 +5,10 @@ sys.stdin = open("0_SASA 모형을 만들어보자.txt")
 
 A, S = map(int, input().split())
 
-A_ = A // 2                 #2
-S_ = S // 2                 #2
+A_ = A // 2                 # 2의 몫
+S_ = S // 2                 # 2의 몫
 
-print(min(A_,S_))
+print(min(A_,S_))           # 최소 출력
 
 
 
