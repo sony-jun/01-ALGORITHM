@@ -2,6 +2,8 @@
 
 [후기](#후기)
 
+[programmers 음양더하기](#programmers-음양더하기)
+
 [단어공부](#단어공부)
 
 [크로아티아 알파벳](#크로아티아-알파벳)
@@ -14,8 +16,36 @@
 
 ## 후기
 
-> 
+> 오늘은 구글링을 최대한 안 하고, 먼저 정의에 대해 많이 고민하고 풀어보았습니다.
 >
+> 확실히, 코드가 더 이해 쉽게 쓰여지는 느낌을 받았습니다. 중간 중간에, 어떤 식으로 코드를 작성하는지는, 구글링을 통해 작성하기는 했지만, 확실히 성취감이 더 있었습니다.
+
+
+
+## programmers 음양더하기
+
+어떤 정수들이 있습니다. 이 정수들의 절댓값을 차례대로 담은 정수 배열 absolutes와 이 정수들의 부호를 차례대로 담은 불리언 배열 signs가 매개변수로 주어집니다. 실제 정수들의 합을 구하여 return 하도록 solution 함수를 완성해주세요.
+
+```python
+def solution(absolutes, signs):
+# absolutes 와 signs의 리스트 안의 값들의 개수는 같다
+
+    result = 0
+    for i in range(len(absolutes)):
+    # range(len(abolutes))를 for문을 통해 인덱스 가져오기
+        if signs[i] == True:
+        # signs에 i 인덱스가 True면
+            result = result + absolutes[i]
+            # 결과 값에 absolutes 인덱스 i번째를 더해준다
+        elif signs[i] == False:
+        # signs에 i 인덱스가 False면
+            result = result - absolutes[i]
+            # result 결과 값에 absolutes 인덱스 i번째를 빼준다
+    
+    return result
+
+print(solution([4, 7, 12], [True, False, True]))
+```
 
 
 
