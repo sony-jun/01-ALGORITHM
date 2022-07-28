@@ -1,9 +1,11 @@
 n=int(input())
 result=[]
 answer=[]
+
 for i in range(n):
     a,b=map(int, input().split())
     result.append([a,b])
+    
 for i in result:
     temp=0
     for j in result:
