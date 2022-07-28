@@ -23,3 +23,4 @@ for j in range(len(n)):
 
 print(time)
 
+# 이 문제는 다시 해봐야 함..
