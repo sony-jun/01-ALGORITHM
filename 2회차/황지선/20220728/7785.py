@@ -8,6 +8,7 @@
 
 n = int(input())
 dict = {} # key : name, value : status_
+list0 = []
 
 for i in range(n):
     name, status_ = input().split()
@@ -17,7 +18,12 @@ for i in range(n):
 
 for j in dict:
     if dict[j] == 'enter' :
-        print(j)
+        list0.append(j)
+
+# ***사전 순의 역순으로 한 줄에 한 명씩 출력한다.***
+list0.sort()
+list0.reverse()
+print(*list0, sep='\n')
 
 # Askar
 # Artem
