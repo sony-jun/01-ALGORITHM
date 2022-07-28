@@ -6,20 +6,29 @@
 
 # 입력 216   출력 198
 
+# N = int(input())
+
+# con = 1
+
+# while con < N:
+#     con += 1
+#     con_add = sum(list(map(int, str(con))))
+#     result = con + con_add
+#     if N == result:
+#         print(con)
+#         break
+#     elif con == N:
+#         print(0)
+
+
 N = int(input())
 
-con = 1
-
-while con < N:
-    con += 1
-    con_add = sum(list(map(int, str(con))))
-    result = con + con_add
-    if N == result:
-        print(con)
+for i in range(1, N + 1):
+# 1부터 N까지 경우의 수를 탐색한다
+    con_add = sum(list(map(int,str(i))))
+    con = con_add + i
+    if con == N:
+        print(i)
         break
-    elif con == N:
-        print(0)
-    
-    # elif N > result:
-    # print(0)
-    # break
+else:
+    print(0)

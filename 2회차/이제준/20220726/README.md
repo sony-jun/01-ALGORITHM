@@ -51,10 +51,26 @@ for i in range(max(a,b),(a * b) + 1):
     # 그 숫자를, 즉 최소공배수를 출력해준다
         print(i)
         break
-    
+------------------------------------------------------------------
+a, b = map(int, input().split())
+
+for i in range(min(a,b), 0, -1):
+    if (a % i == 0) and (b % i == 0):
+        print(i)
+        break
+
+lcm = (a * b) / i
+# 시간 복잡도를 줄이기 위해 최소공배수는 공식으로 푼다
+# i 는 최대공약수
+
+print(int(lcm))    
 ```
 
+#### 공식을 찾아서 구하기
 
+##### 최소공배수의 공식
+
+최소공배수(a, b) = (a * b) / 최대공약수(a, b) 
 
 
 
@@ -70,12 +86,15 @@ for i in range(max(a,b),(a * b) + 1):
 
 입력 216   출력 198
 
+**모든 경우의 수를 탐색을 해야 한다 (1 ~ N-1)**
+
 ```python
 N = int(input())
 
 con = 1
 
-while con:
+while con < N:
+# con이 N 미만에 도달할때까지만 계산을 해준다
     con += 1
     # con을 1씩 계속 더해준다
     con_add = sum(list(map(int, str(con))))
@@ -88,10 +107,23 @@ while con:
         break
     elif con == N:
         print(0)
-    
-    # elif N > result:
-    # print(0)
-    # break
+	# con이 N과 값이 같아지면 0을 출력한다
+    # 이유는, con과 N 값이 같아지면 생성자가 없다는 것이다
+-------------------------------------------------------------------
+
+# 코드 리뷰
+
+N = int(input())
+
+for i in range(1, N + 1):
+# 1부터 N까지 경우의 수를 탐색한다
+    con_add = sum(list(map(int,str(i))))
+    con = con_add + i
+    if con == N:
+        print(i)
+        break
+else:
+    print(0)
 ```
 
 
@@ -121,9 +153,14 @@ while con:
  # 인덱스
      if a[i] > a[i - 1]:
      # 오르막길일때
+     # 기준은 앞이 아닌, 뒤에 인덱스가 기준이 된다
+     # for문을 보면 인덱스가 0부터가 아닌 1부터 시작한다
+     # 즉 비교를 할때 'i'와 'i-1' 을 해야 첫번째 비교할 때,
+     # 'i'는 a[1], 'i-1'은 a[0]부터 비교를 한다.
          incline += a[i] - a[i - 1]
      # a의 인덱스 i번째와 그 전 인덱스 값을 빼서
      # incline에 더했음
+     # a[i]가 a[i-1]보다 계속 이어지면, 누적이 된다
          up.append(incline)
      # 그리고 그 incline 값을 up이란 리스트에 넣었다
      else:
@@ -134,6 +171,8 @@ while con:
  print(max(up))
  # up에 있는 모든 수를 비교해서 max, 최대 값을 구함
  ```
+
+##### 🚨🚨🚨 height[0] > height[-1] → 0과 음수를 비교하면, 첫 번째 인덱스와, 마지막 인덱스를 비교하게 된다
 
 
 
