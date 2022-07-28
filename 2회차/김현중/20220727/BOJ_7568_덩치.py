@@ -12,8 +12,7 @@ weight = lst[1::2]
 for i in range(len(tall)):
     cnt = 1
     for j in range(len(tall)):
-        if tall[i] < tall[j]:
-            if weight[i] < weight[j]:
-                cnt += 1
+        if tall[i] < tall[j] and weight[i] < weight[j]:
+            cnt += 1
     print(cnt, end=' ')
     
