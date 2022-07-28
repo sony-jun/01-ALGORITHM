@@ -1,21 +1,22 @@
 n = int(input())
-x = []
-y = []
-z = []
+xy = []
+
+
 for i in range(n):
-    a,b = map(int,input().split())
-    x.append(a)
-    y.append(b)
+    xy.append(list(map(int,input().split())))
+    
+    
     
 for j in range(n):
+    rank = 1
+    for k in range(n):
+        if j != k:
+            if (xy[j][0] < xy[k][0]) and (xy[j][1] < xy[k][1]):
+                rank +=1
+    print(rank,end = ' ') 
     
-    if x[j] == max(x) and y[j] == max(y):
-        z.append(1)
-    elif x[j] == min(x) and y[j] == min(y):
-        z.append(n)
-    else:
-        z.append(j)
-print(z)
+    
+
     
 
 
