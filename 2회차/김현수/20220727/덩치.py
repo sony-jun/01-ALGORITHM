@@ -29,10 +29,12 @@ sys.stdin = open('덩치.txt','r')
 T = int(input()) # 사람 인원수
 weight = []
 height = []
+# list_ = []
 for i in range(T):
     a, b = (map(int,input().split())) #키와 몸무게를 각각 리스트로 제작
     weight.append(a)
     height.append(b)
+    #list_.append((a, b))
 print(weight, height) #몸무게, 키
 
 ranking = [] #사람들의 등수
