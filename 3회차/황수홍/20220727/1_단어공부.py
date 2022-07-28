@@ -1,14 +1,16 @@
-words = input().upper()
-word = list(set(words))
+word = input().lower() # 대소문자를 가리지 않기 때문에, 입력에서 소문자로 변환
+li = {}
+for i in word:  # 입력의 문자열의 요소 중에서 
+    if i not in li:
+        li[i] = 0
+    if i in li:
+        li[i] += 1
+res = []
+for value, key in li.items():
+    if value == max(li.values()):
+        res.append(key)
 
-list = []
-
-for i in word :
-    cnt = words.count(i)
-    list.append(cnt)
-
-if list.count(max(list)) > 1 :
-    print('?')
-else :
-    max = list.index(max(list))
-    print(word[max])
+if len(res) == 1:
+    print(res.upper())
+else:
+    print("?")
