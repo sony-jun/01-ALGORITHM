@@ -8,7 +8,6 @@
 word = input().upper()
 set_word = list(set(word)) 
 
-
 list_ = [] 
 
 for char in set_word: 
@@ -21,14 +20,4 @@ else:
 
 
 
-word = input().upper()
 
-alphabet = [0] * 26
-
-for i in word:
-    alphabet[ord(i)-65] += 1
-
-if alphabet.count(max(alphabet)) > 1:
-    print("?")
-else:
-    print(chr(alphabet.index(max(alphabet))+65))
