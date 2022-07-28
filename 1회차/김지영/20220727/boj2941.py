@@ -12,4 +12,4 @@ for i in range(len(cro)):
 word = word.replace(' ','')
 print(sum+len(word))
 # print(re.sub(cro[5],'',word))   # 이건 작동을 하는데...
-print(word)
+# print(word)
