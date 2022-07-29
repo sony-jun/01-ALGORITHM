@@ -13,11 +13,10 @@ n = input()
 sum_ = 0
 
 d_k = list(d.keys())
-d_v = list(d.values())
 
 for i in n:
     for j in range(len(d)):
         if i in d_k[j]:
-            sum_ += d_v[j] + 1
+            sum_ += d[d_k[j]] + 1
 
 print(sum_)
