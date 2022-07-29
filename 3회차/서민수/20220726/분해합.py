@@ -17,28 +17,34 @@
 # 예제 출력 1 
 # 198
 
-#
-
+# 숫자 N입력
 N = int(input())
-li = []
+answer = 0
+
 
 # 출력값이 N보다는 작은 값이라는 가정하에 모든 경우의 수 확인
 # n의 범위에 i가 있다면
-for i in range(N):
-    # s= 0 
+# 1부터 N 사이의 모든 수의 분해합을 탐색
+for i in range(1,N):
+    # 분해합 저장 변수
     s = 0  
-    # s= i+1                  # for문이 돌 때마다 s를 갱신해야 함
-    s += i 
+
+    # 각자리수의 합
     # 형변환 시킨 i에 j가 있다면
     for j in str(i):
         # s + int(j)+1
         s += int(j)
+        # 각 자리수의 합 + 수의 합 => 분해합
+        s = s + i
+    # 구한 분해합과 입력이 같으면
+    # number는 N의 생성자
+    if N == s:
+        print(i)
+       # answer = i
     # s가 n일 때
-    if s == N:
-        # 리스트에 추가하여라
-        li.append(i)
+    break #가장 작은 생성자를 탐색
 
-if li == []:
-    print(0)
+# break를 만나지 않으면
 else:
-    print(min(li))
+     print(0)
+# print(answer)

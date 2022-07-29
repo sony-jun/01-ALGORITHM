@@ -11,7 +11,7 @@ sys.stdin = open("1_상수.txt")
 # a,b를 받을 함수
 a, b = input().split()
 
-# 각 a와 b를 리스트로 뒤집어준 후 인트 형변환
+# 각 a와 b의 숫자를 뒤집어준다
 a = a[::-1]
 b = b[::-1]
 
