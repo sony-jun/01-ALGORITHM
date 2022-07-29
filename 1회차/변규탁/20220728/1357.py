@@ -1,9 +1,9 @@
-X, Y = map(int, input().split())
+X, Y= map(int, input().split())
 
 reverse_num_X = ''
-while X != 0:
+while X != 0: 
     reverse_num_X += str(X % 10)
-    X = X // 10
+    X = X // 10 
 
 reverse_num_Y = ''
 while Y != 0:
@@ -18,3 +18,5 @@ while sum_ != 0:
     sum_ = sum_ // 10
 
 print(int(answer))
+
+
