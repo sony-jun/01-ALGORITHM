@@ -6,7 +6,8 @@ for line in range(log):
 
 # print(log_)
 k = [k for k,v in log_.items() if v == 'enter']
+k.sort()
 # 사전의 역순
-k = sorted(k)
-for i in k[::1]:
+# print(k)
+for i in k[::-1]:
     print(i)
