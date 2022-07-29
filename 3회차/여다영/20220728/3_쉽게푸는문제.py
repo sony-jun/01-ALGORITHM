@@ -14,10 +14,12 @@
 import sys
 sys.stdin = open('3_쉽게푸는문제.txt', 'r')
 
+start, end = map(int, input().split())
+
 nums = []
 i = 1
-while len(nums) < 1000:
-    #nums의 개수가 1000개가 되지 않을때 까지
+while len(nums) < end: 
+    #end까지만 수열을 받아주면 된다.
     for j in range(i):
         #i개 만큼
         nums.append(i)
@@ -25,7 +27,6 @@ while len(nums) < 1000:
     i += 1
 
 sum = 0
-start, end = map(int, input().split())
 #시작점과 끝점을 받아서
 for k in range(start - 1, end):
     #이 범위에 해당하는 수들을 더해준다.
