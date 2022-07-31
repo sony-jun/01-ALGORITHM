@@ -3,11 +3,13 @@
 
 push = input()
 
-dial_alpha ={
+dial_alpha =\
+    {
     7 : [],
     8 : [],
     9 : []
     }
+    
 i = 25
 
 while i >= 15:
@@ -29,10 +31,13 @@ while i < 15:
     i -= 1
     if i < 0:
         break
+    
 res = 0
+
 for s in push:
     for k in dial_alpha:
         if s in dial_alpha[k]:
             res += k
+
 res += len(push)
 print(res)

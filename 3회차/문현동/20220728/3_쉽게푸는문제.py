@@ -8,9 +8,10 @@ s = []
 res = 0
 
 while i <= B:
-    for n in range(1, i+1):
+    for n in range(1, i + 1):
         s.append(i)
     i += 1
+print(s)
 
 for n in s[A-1:B]:
     res += n
