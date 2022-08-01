@@ -15,7 +15,7 @@ m = int(input())
 
 card_cnt = list(input().split())
 for k in card_cnt:
-    if k == dic[k]:
-        result.get[k,'0']
-
-print(result)
+    if k in dic:
+        print(dic[k],end=' ')
+    else:
+        print('0', end=' ')
