@@ -11,5 +11,6 @@ for i in range(1, B+1):
     # i 만큼 반복해서 리스트 arr에 넣어줌
     for j in range(i):
         arr.append(i)
-print(arr[A-1:B])
-# print(sum(arr[A-1:B]))
+
+# print(arr[A:B]) # 3,3,3,4
+print(sum(arr[A-1:B]))
