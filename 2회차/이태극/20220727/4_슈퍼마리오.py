@@ -7,3 +7,7 @@ for i in range(10):
             score-=n
         break
 print(score)
+
+#  if score>=100:
+# #         if 108> 100 - (score -n):
+# #             score-=n
