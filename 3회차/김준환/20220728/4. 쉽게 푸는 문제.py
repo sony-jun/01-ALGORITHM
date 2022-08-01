@@ -8,18 +8,15 @@
 #     lst += str(i)*i
 # num_lst = list(map(int,lst[s-1:e]))
 # print(num_lst)
-# print(str(sum(num_lst)))
+# print(sum(num_lst))
 
 
 
-
-
-# 다른 사람의 코드
-a,b = map(int,input().split())
+s,e = map(int,input().split())
  
-arr = [0]
-for i in range(46):
+lst = [0]
+for i in range(1,46):
     for j in range(i):
-        arr.append(i)
+        lst.append(i)
  
-print(sum(arr[a:b+1]))
+print(sum(lst[s:e+1]))
