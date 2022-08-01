@@ -3,14 +3,14 @@
 
 from collections import deque
 
-# N = int(input())
-N = 7
+N = int(input())
 que_list = []
-
+pop_list = []
 for i in range(1,N+1):
     que_list.append(i)
     que = deque(que_list)
 while len(que)!=1:
-    que.popleft()
+    pop_list.append(que.popleft())
     que.append(que.popleft())
-print(que)
+pop_list.append(que[0])
+print(pop_list)
