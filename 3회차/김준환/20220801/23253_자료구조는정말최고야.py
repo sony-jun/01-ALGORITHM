@@ -1,25 +1,42 @@
+# import sys
+# input = sys.stdin.readline
+
+# n, m = map(int,input().split())
+# dummy_lst = []
+# for i in range(m):
+#     l = int(input())
+#     dummy_lst.append(list(map(int,input().split())))
+
+# idx = 0
+# num = 1
+# answer = 'No'
+
+# while idx < len(dummy_lst):
+#     if len(dummy_lst[idx]) > 0 and dummy_lst[idx][-1] == num:
+#         dummy_lst[idx].pop(-1)
+#         idx=-1
+#         if num == n:
+#             answer='Yes'
+#             break
+#         num += 1
+#         idx == 0
+#     idx += 1
+    
+# print(answer)
+
+
+import sys
+input = sys.stdin.readline
 
 n, m = map(int,input().split())
 dummy_lst = []
 for i in range(m):
     l = int(input())
     dummy_lst.append(list(map(int,input().split())))
-
-idx = 0
-num = 1
-answer = 'No'
-
-while idx < len(dummy_lst):
-    if len(dummy_lst[idx]) > 0 and dummy_lst[idx][-1] == num:
-        dummy_lst[idx].pop(-1)
-        idx=-1
-        if num == n:
-            answer='Yes'
-            break
-        num += 1
-        idx == 0
-    idx += 1
-    
+answer = 'Yes'
+for i in range(m):
+    if dummy_lst[i] != sorted(dummy_lst[i], reverse=True):
+        answer = 'No'
 print(answer)
 
 
