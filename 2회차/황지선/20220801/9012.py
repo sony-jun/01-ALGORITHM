@@ -24,10 +24,37 @@
 # =========================
 
 
+# T = int(input())
+
+# for t in range(T):
+#     stack = []
+#     Paren = input() # Parenthesis 괄호의 줄임말
+    
+#     for p in Paren:
+
+#         if p == '(':
+#             stack.append(p)
+#         elif p == ')':
+            
+#             if stack: # 스택이 비어있지 않은 경우
+#                 stack.pop()
+#             else: # 스택이 비어있을 경우
+#                 print("NO")
+#                 break
+   
+#     else: # break 되지 않았을 경우
+        
+#         if not stack: # 스택이 비어있다면
+#             print("YES")
+#         else: # 스택에 괄호가 남아있다면
+#             print("NO")
+
+from collections import deque
+
 T = int(input())
 
 for t in range(T):
-    stack = []
+    stack = deque()
     Paren = input() # Parenthesis 괄호의 줄임말
     
     for p in Paren:
@@ -37,7 +64,7 @@ for t in range(T):
         elif p == ')':
             
             if stack: # 스택이 비어있지 않은 경우
-                stack.pop()
+                stack.popleft()
             else: # 스택이 비어있을 경우
                 print("NO")
                 break
