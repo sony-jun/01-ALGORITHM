@@ -2,6 +2,7 @@
 import sys
 sys.stdin = open('자료구조는정말최고야.txt','r')
 
+# sorted로 풀어보자
 # 4 2
 # 2
 # 3 1
@@ -15,12 +16,9 @@ sys.stdin = open('자료구조는정말최고야.txt','r')
 # 4 2
 
 N, M = map(int,input().split()) #N:전체책수. M:묶음수
-# b = int(input()) #몇권인가
-# c = list(map(int,input().split())) #책번호
-# d = int(input()) #몇권인가
-# e = list(map(int,input().split())) #책번호
-MK = []
-list_ = []
+
+MK = [] #각묶음의 책개수
+list_ = [] #각묶음의 책번호, 인덱스가 자리
 for m in range(M):
     MK.append(int(input()))
     list_.append(list(map(int,input().split())))
@@ -32,7 +30,6 @@ for n in range(1,N+1): #책의 갯수만큼 반복 1234 / n책의 번호
             MK[m] -= 1 #묶음에 있는 권수를 줄인다.
             list_[m].pop() #묶음에 있는 번호는 뺸다
             print(list_,MK) #list_와MK변화
-
 
 if sum(MK) == 0 :
     print('Yes')
