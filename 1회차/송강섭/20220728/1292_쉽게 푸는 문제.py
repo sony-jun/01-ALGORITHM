@@ -1,3 +1,5 @@
+# https://www.acmicpc.net/problem/1292
+
 # A, B = map(int, input().split())
 
 # result = 0

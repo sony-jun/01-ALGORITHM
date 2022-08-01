@@ -2,7 +2,7 @@
 import sys
 from unittest import result
 
-sys.stdin = open("3_OX퀴즈.txt")
+sys.stdin = open("8958_OX퀴즈.txt")
 
 T = int(input())
 
