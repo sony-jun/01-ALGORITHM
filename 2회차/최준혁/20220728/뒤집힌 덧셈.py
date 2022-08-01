@@ -6,8 +6,6 @@ def Rev(x):
         rev += x[i] # 뒤집은 값을 rev에 누적해서 저장
     return int(rev) # int로 리턴해줌
 
-rev_a = Rev(A)
-rev_b = Rev(B)
-rev_c = rev_a + rev_b # 더해서 저장
+rev_c = Rev(A) + Rev(B) # 더해서 저장
 result = Rev(str(rev_c)) # 함수 사용을 위해 str로 변환 후 실행
 print(result)
