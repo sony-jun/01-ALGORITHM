@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 note, dummy = map(int, input().split())
 
 result = True
