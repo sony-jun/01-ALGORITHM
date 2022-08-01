@@ -1,6 +1,9 @@
 import sys
 sys.stdin = open("책더미.txt", "r") 
 
+
+input = sys.stdin.readline
+
 a , b = map(int,input().split())  #책 갯수 : 5 책 더미 갯수 2
 result = ''
 
