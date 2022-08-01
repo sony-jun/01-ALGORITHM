@@ -19,3 +19,4 @@ sum_ = 0
 for i in num:
     sum_ += time[i]
 print(sum_)
+

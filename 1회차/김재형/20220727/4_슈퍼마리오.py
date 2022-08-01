@@ -10,37 +10,62 @@ import sys
 
 sys.stdin = open("4_슈퍼마리오_input.txt")
 
+
+sum_ = 0
+mario = {} # 키값 : 누적합 val : |100 - 누적합|
+ans = 0
+for i in range(10):
+    N = int(input())
+    sum_ += N
+    mario[sum_] =abs(100-sum_)
+#print(mario) #{10: 90, 30: 70, 60: 40, 100: 0, 150: 50, 210: 110, 280: 180, 360: 260, 450: 350, 550: 450}
+    for k, v in mario.items():
+        if v == min(mario.values()):
+            ans = k
+print(ans)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # score = []
-# sum_score = 0
+# sum_score = []
 # for t in range(10):
 #     score.append(int(input()))
-#     for i in score:
-#         if abs(100-i) <= abs(100-sum_score):
-#             sum_score += i
-#             print(sum_score)
+# #print(score) [1, 2, 3, 5, 8, 13, 21, 34, 55, 89] 리스트에 숫자 추가
 
-score = []
-sum_score = []
-for t in range(10):
-    score.append(int(input()))
-#print(score) [1, 2, 3, 5, 8, 13, 21, 34, 55, 89] 리스트에 숫자 추가
+# sum_plus = 0
+# for plus in score:
+#     sum_plus += plus
+#     sum_score.append(sum_plus)
+# #print(sum_score) [1, 3, 6, 11, 19, 32, 53, 87, 142, 231] 누적 합 리스트
 
-sum_plus = 0
-for plus in score:
-    sum_plus += plus
-    sum_score.append(sum_plus)
-#print(sum_score) [1, 3, 6, 11, 19, 32, 53, 87, 142, 231] 누적 합 리스트
+# x = []
+# for near in sum_score:
+#     x.append(abs(100 - near))
+# #print(x) #[99, 97, 94, 89, 81, 68, 47, 13, 42, 131] 100 - 절대값 리스트
+# #print(min(x)) 13
 
-x = []
-for near in sum_score:
-    x.append(abs(100 - near))
-#print(x) #[99, 97, 94, 89, 81, 68, 47, 13, 42, 131] 100 - 절대값 리스트
-#print(min(x)) 13
-
-for i in range(1, len(x)): 
-    if x.count(min(x)) >= 2:
-        print(sum_score[i+1])
-        break
-    else:
-        print(100-min(x))
-        break
+# for i in range(1, len(x)): 
+#     if x.count(min(x)) >= 2:
+#         print(sum_score[i+1])
+#         break
+#     else:
+#         print(100-min(x))
+#         break

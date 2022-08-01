@@ -6,20 +6,38 @@
 
 # 가장 큰 오르막길을 구하는 프로그램을 작성하시오.
 
-N = int(input())
-height = list(map(int, input().split()))
-first = 0
-next = 1
-total = 0
-while next != N:
-    if height[first] < height[next]:
-        total += (height[next] - height[first])
-        first += 1
-        next += 1
-    if height[first] == height[next]:
-        total = 0
-    if height[first] >= height[next]:
-        total = 0
-print(total)
+# N = int(input())
+# height = list(map(int, input().split()))
+# first = 0
+# next = 1
+# total = 0
+# while next != N:
+#     if height[first] < height[next]:
+#         total += (height[next] - height[first])
+#         first += 1
+#         next += 1
+#     if height[first] == height[next]:
+#         total = 0
+#     if height[first] >= height[next]:
+#         total = 0
+# print(total)
 
 #=========================미완
+
+N = int(input())
+
+road = list(map(int, input().split()))
+#print(road)                             # [1, 2, 1, 4, 6]
+h = 0  # 높이
+
+h_ls = []
+for i in range(1,N):
+    if road[i-1] < road[i]:
+        h += road[i] - road[i-1]
+        if i == N-1:
+            h_ls.append(h)
+            break
+    if road[i-1] >= road[i]:
+        h_ls.append(h)
+        h = 0
+print(max(h_ls))

@@ -12,3 +12,15 @@ sum_num = 0
 for sum_ in ls[srt-1:fin]:  #3~7번까지니까 인덱스로 치면 2~6인데 뒤에는 자동으로 -1되니까
     sum_num += sum_
 print(sum_num)
+
+#============================================
+
+# ls = []
+# A = 3
+# B = 7
+# N = 1
+# while len(ls) < B:
+#     for _ in range(N):
+#         ls.append(N)
+#     N += 1
+# print()

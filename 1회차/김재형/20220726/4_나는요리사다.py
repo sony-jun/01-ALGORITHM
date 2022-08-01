@@ -18,13 +18,23 @@ sys.stdin = open("4_나는요리사다.txt")
 # if total.values() == max(total.values()):
 #     print()
 
-num = 0
-cnt = 0
+# num = 0
+# cnt = 0
 
-for i in range(1,6):
-    A = list(map(int, input().split()))
+# for i in range(1,6):
+#     A = list(map(int, input().split()))
     
-    if sum(A) > num:
-        num = sum(A)
-        cnt = i
-print(cnt, num)
+#     if sum(A) > num:
+#         num = sum(A)
+#         cnt = i
+# print(cnt, num)
+
+dict_ = {}
+sum_ = 0
+for i in range(1, 6):
+    a, b, c, d = map(int, input().split())
+    sum_ = a + b + c + d
+    dict_[i] = sum_
+for k, v in dict_.items():
+    if v == max(dict_.values()):
+        print(k, v)

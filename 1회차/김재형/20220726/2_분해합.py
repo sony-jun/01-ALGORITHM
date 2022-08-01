@@ -8,12 +8,14 @@ N = int(input())
 x_sum = 0 # 각 자리수 더하기
 
 for x in range(1,N+1): # 1부터 N까지 돌면서
+    x_sum = 0
     for i in str(x):   
         x_sum += int(i) # 각 자리수 더한 값
-    if x + x_sum != N: # x + x의 각 자리수 합이 N이 아니면
-        x_sum = 0  # 각 자리수 합 초기화
+    # if x + x_sum != N: # x + x의 각 자리수 합이 N이 아니면
+    #     x_sum = 0  # 각 자리수 합 초기화
     if x + x_sum == N:
         print(x)
         break # 가장 작은 생성자를 구하라 했으니까 
-else:
-    print(0)
+    elif x == N:
+        print(0)
+
