@@ -1,7 +1,6 @@
 # 덱 활용하기
 from collections import deque
 
-
 # 첫째 줄에 정수 N(1 ≤ N ≤ 1,000)이 주어진다.
 N = int(input())
 card = deque(list(range(1, N+1)))
