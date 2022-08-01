@@ -12,7 +12,6 @@
 # 첫째 줄에 답을 출력. 생성자가 없으면 0 출력
 
 number = int(input())
-result = 0
 
 for i in range(1, number + 1):
     # str 함수를 통해 i의 각 자리수를 리스트 N에 넣음
