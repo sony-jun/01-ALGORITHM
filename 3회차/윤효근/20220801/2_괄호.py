@@ -18,5 +18,5 @@ for i in range(n):
             break
     if sum > 0:
         print('NO')
-    else:
+    elif sum ==0:
         print('YES')

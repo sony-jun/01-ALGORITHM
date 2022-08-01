@@ -10,4 +10,4 @@ while d:
     if d:
         d.append(d.popleft())
 
-print(result)
+print(" ".join(map(str,result)))
