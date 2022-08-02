@@ -1,0 +1,6 @@
+A,B = map(int,input().split())
+A_lst = list(map(int,input().split()))
+B_lst = list(map(int,input().split()))
+cha_A = set(A_lst + B_lst) -set(B_lst)
+cha_B = set(A_lst + B_lst) -set(A_lst)
+print(len(cha_A)+len(cha_B))
