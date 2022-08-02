@@ -9,20 +9,17 @@ for i in range(10):
     if A > B:
         scoreA += 3
         win.append(['A',scoreA,scoreB])
-    if B > A:
+    elif B > A:
         scoreB += 3
         win.append(['B',scoreA,scoreB])
-    if B == A:
+    else :
         scoreA += 1
         scoreB += 1        
         win.append(['D',scoreA,scoreB])
 
 print(scoreA,scoreB)
 
-if scoreA > scoreB:
-    print('A')
-if scoreA < scoreB:
-    print('B')
+print('A' if scoreA > scoreB else 'B')
 if scoreA == scoreB:
     if win[9][0] != win[8][0]:
         print('D')
@@ -34,3 +31,4 @@ if scoreA == scoreB:
             if i[0] != 'D':
                 print(i[0])
                 break
+# 이게 왜 틀렸지...

@@ -25,6 +25,7 @@ for test_case in range(1,T+1):
     def PW(x,s):
         for i in s[::-1]:
             OriPw.insert(int(x),i)
+
     # lst = [0,1,2,3]
     # lst_test = ['a','b','c']
     # k = 1
