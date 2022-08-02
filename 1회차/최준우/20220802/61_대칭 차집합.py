@@ -4,12 +4,12 @@ import sys
 input = sys.stdin.readline
 
 num1, num2 = map(int, input().split())
-A = list(map(int, input().split()))
-B = list(map(int, input().split()))
+A = set(map(int, input().split()))
+B = set(map(int, input().split()))
 amb = A - B
 bma = B - A
-result = []
+result = 0
 
-result = set(amb + bma)
+result = len(amb) + len(bma)
 
-print(len(result))
+print(result)
