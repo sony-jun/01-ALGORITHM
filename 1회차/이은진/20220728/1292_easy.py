@@ -7,6 +7,4 @@ for i in range(1, b+1):
             break
         nums.append(i)
 
-        
-
 print(sum(nums[a-1:b]))
