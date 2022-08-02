@@ -6,7 +6,7 @@
 
 import sys
 
-sys.stdin = open("예제입력.txt", "r")
+sys.stdin = open("신용카드1.txt", "r")
 
 T = int(input())
 

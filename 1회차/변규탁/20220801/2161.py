@@ -8,6 +8,8 @@ while len(queue) > 1:
 
 print(queue[0])
 
+##########################################
+
 from collections import deque
 
 n = int(input())
