@@ -13,8 +13,6 @@ for _ in range(M):
         if ki2[i] < ki2[i+1]:
             out = 1
             break
-
+        
 print('Yes' if out == 0 else 'No')
-
-
 
