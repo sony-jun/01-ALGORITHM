@@ -15,6 +15,7 @@ for _ in range(T):
             list_gyal.append(i)
         elif i == ")":
             list_gyal.append(i)
+            
         if list_gyal.count("(") < list_gyal.count(")"):
             print("NO")
             break
