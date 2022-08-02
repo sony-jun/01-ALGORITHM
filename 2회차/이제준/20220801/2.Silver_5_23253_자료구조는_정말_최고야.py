@@ -19,39 +19,9 @@ if 0 in pos:
 else:
     print('Yes')
 
-
-
-
-# n, m = map(int, input().split())
-# p = True
-# for _ in range(m):
-#     i = int(input())
-#     k = list(map(int, input().split()))
-#     for j in range(i-1):
-#         if k[j] < k[j+1]:
-#             p = False
-#             break
-#     if not p: break
-
-# print('Yes' if p else 'No') 
-
-
-
-
-
-# n ,m = map(int,input().split())
-# answer = []
-# for i in range(m):
-#     cnt = int(input())
-#     books = list(map(int,input().split()))
-#     for i in range(len(books)-1):
-#         if books[i] < books[i+1]:
-#             answer.append('No')
-#             break
-#         else:
-#             answer.append('Yes')
-#             continue
-# if 'No' in answer:
-#     print('No')
-# else:
-#     print('Yes')
+# stack 안에 비교할 리스트를 가지고 온다
+# 리스트의 마지막 값을 .pop을 한 후, 변수로 저장한다
+# .pop을 한 변수와 stack의 마지막 값을 비교한다!
+# 그렇게 비교해서, 조건문과 일치하면 stack에 있던 마지막 값을
+# .pop을 한 후, 다시 변수에 저장하면 된다.
+# stack에 값이 없어질 때까지 진행하면 True가 된다
