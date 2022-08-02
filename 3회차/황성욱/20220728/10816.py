@@ -3,8 +3,9 @@ p_arr = list(map(int, input().split()))
 m = int(input())
 f_arr = list(map(int, input().split()))
 f_dict = {}
-for f in f_arr:
-    f_dict[f] = 0
+li = [0] * m
+# for f in f_arr:  # 키 중복 
+#     f_dict[f] = 0
 for p in p_arr:
     if p in f_dict:
         f_dict[p] += 1

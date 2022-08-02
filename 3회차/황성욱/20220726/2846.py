@@ -6,8 +6,10 @@ for i in range(len(n_list)-1): # 배열의 i번째항이 i+1번째 항보다 작
     if n_list[i] < n_list[i + 1]:
         sum_val += (n_list[i + 1] - n_list[i])
     else: # if 문의 조건을 만족하지 않으면 sum_val을 0으로 초기화
+        
         sum_val = 0
-    res.append(sum_val) 
+    res.append(sum_val)
+    print(res)
 
 print(max(res)) # 뺀값의 리스트 중 최댓값이 최대의 오르막길 크기이기 때문에
 

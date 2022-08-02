@@ -6,7 +6,7 @@ def solution(numbers):
         for j in range(1+i,length):
             res = numbers[i]+numbers[j]
             if res not in answer:
-                answer.append(numbers[i]+numbers[j])
+                answer.append(res)
             
 
 

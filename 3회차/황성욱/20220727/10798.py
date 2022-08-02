@@ -3,10 +3,11 @@ arr = []
 for i in range(5):
     s = input()
     arr.append([x for x in s])
+
 dx = 0
 dy = 0
 string = ''
-while True:
+while arr[dx]:
     try:
         string += arr[dx][dy]   
     except:
@@ -25,3 +26,4 @@ print(string.rstrip())
 
 # Aa0aPAf985Bz1EhCz2W3D1gkD6x
 # Aa0aPAf985Bz1EhCz2W3D1gkD6x
+# aa0apaf985bz1ehcz2w3dgkd6x
