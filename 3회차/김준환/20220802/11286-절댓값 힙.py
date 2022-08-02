@@ -23,37 +23,22 @@
 #         absolu_num.pop(original_idx)
 
 import sys
-# input = sys.stdin.readline
-sys.stdin = open('11286.txt')
+input = sys.stdin.readline
+# sys.stdin = open('11286.txt')
 import heapq
 
-n = int(input())
-
 heap = []
-storage = []
 
+n = int(input())
 for _ in range(n):
     num = int(input())
-    if num == 0 and len(heap)==0:
-        print(0)
-        continue
-    elif num != 0:
-        heapq.heappush(heap,num)
-    else:
-        if len(heap) == 1:
-            print(heapq.heappop(heap))
-            continue
-        print(f'heap = {heap}')
-        first = heapq.heappop(heap)
-        second = heap[0]
-        print(f'first = {first}')
-        print(f'heap = {heap}')
-        print(f'second = {second}')
-        while abs(first) > abs(second):
-            storage.append(first)
-            first = heapq.heappop(heap)
-            second = heap[0]
-        print(first)
-        for i in storage:
-            heapq.heappush(heap,i)
-        storage = []
+    if num < 0:
+        heapq.heappush(heap,[abs(num),-1])
+    elif num > 0:
+        heapq.heappush(heap,[abs(num),1])
+    elif num == 0:
+        if len(heap) == 0:
+            print(0)
+        else:
+            number = heapq.heappop(heap)
+            print(number[0]*number[1])
