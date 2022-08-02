@@ -10,4 +10,3 @@ for i in range(10): # 수 10개 입력
 cnt_number=set(cnt_number) #리스트는 중복을 허용하기 때문에 set함수를 이용해 중복제거
 print(len(cnt_number)) # ★★★ count는 원하는 특정 문자를 셀 때 활용하는 것, 위에서 set함수로 중복 제거를 했기 때문에 
                        #        len을 통해서 서로 다른 값이 몇 개 있는지 출력할 수 있음.
- 

@@ -1,3 +1,4 @@
+# 다이얼
 word=str(input().upper())
 list=list(word)
 
