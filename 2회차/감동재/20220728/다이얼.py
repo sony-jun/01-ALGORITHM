@@ -6,8 +6,6 @@ for i in range(0,10):
 
 output = 0
 
-
-
 for i in range(0,len(s)):
     tmp = ord(s[i])- ord('A') + 1
     j=0
@@ -19,3 +17,5 @@ for i in range(0,len(s)):
     output += j+1
 
 print(output)
+
+
