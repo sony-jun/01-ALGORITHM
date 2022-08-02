@@ -22,3 +22,22 @@ print('Yes' if chk else 'No')
 
 
 #pop끼리 모았을때 순서정렬이 되나..? 체크... 순서대로 pop한거 저장해서 1234 순 인지 확인해보는 걸로 다시 짜보자
+
+
+#---풀이
+stk_list = []
+ans = 'Yes'
+
+for stk in stk_list:
+
+    comp = stk.pop()
+
+    while len(stk) != 0:
+        if stk[-1] > comp:
+            comp = stk.pop()
+        else:
+            ans = 'No'
+            break
+    if ans == 'No':
+        break
+print(ans)

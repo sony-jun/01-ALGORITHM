@@ -55,3 +55,5 @@ for _ in range(T):
     elif ps_stack or not vps:
         #여는 괄호 스택에 원소가 남아있거나 vps값이 변경된 경우는 짝을 맞추지 못한 경우 이므로 False
         print('NO')
+
+# 스택 2개 만들어서 좌우 괄호 저장
