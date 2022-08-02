@@ -21,30 +21,29 @@ for test_case in range(T):
             break
 '''
 T = int(sys.stdin.readline())
-# ()))((()
+
 for test_case in range(T):
     ps = list(sys.stdin.readline().rstrip())
     
-    left = 0
-    right = 0
+    balance = 0
+    ref = True
     
     if len(ps) % 2 != 0 or ps[-1] != ')':
-        print("No")
-        
+        ref = False
     else:
-        for _ in range(len(ps)): # ( ( ( ( ) ( ) ) ( )
-            if ps.pop() == ')':
-                right += 1
+        for _ in range(len(ps)):
+            if ps[-1] == ')':
+                ps.pop()
+                balance += 1
             else:
-                left += 1
-                while left < right:
-                    if ps[-1] == '(':
-                        ps.pop()
-                        left += 1
-                        continue
-                    else:
-                        print("No")
-                        break
-                if ps[-1] != ')':
-                    print("No")
+                ps.pop()
+                balance -= 1
+                if balance < 0:
+                    ref = False
                     break
+        if balance != 0:
+            ref = False
+    if ref:
+        print("YES")
+    else:
+        print("NO")
