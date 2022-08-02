@@ -1,11 +1,26 @@
 from re import A
+
 import sys
+input = sys.stdin.readline
 
-sys.stdin = open("06.배부른마라토너.txt")
+names = dict()
+n = int(input())
 
-N = int(input()) #참가자 수 입력 받아서
-attend_list = list(map(int,input()))
-# 참가자의 이름 입력받기(리스트)
+for _ in range(n):
+    name = input()
+    if name in names:
+        names[name] += 1
+    else:
+        names[name] = 1
+
+for _ in range(n-1):
+    name = input()
+    names[name] -= 1
+
+for key in names:
+    if names[key] > 0:
+        print(key)
+
 
 '''INPUT값을 살펴보면, 3명의 참석자를 알려주고, 그 뒤에 완주자를 알려줘.
 뒤에서 입력받지 못한 값이 : 탈락자. 인거지.
@@ -13,4 +28,4 @@ attend_list = list(map(int,input()))
 동명이인이 있을 수 있다<<라는 게 dictionary로만 저장하면 안되고 ,
 defaultdict 로 해야한다는 거구나..'''
 
-
+##다른사람이 푼거 읽어보고 해석해보고 썼는데 시간초과 뜬다 얘야...
