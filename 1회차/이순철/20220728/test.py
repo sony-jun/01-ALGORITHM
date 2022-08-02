@@ -19,7 +19,7 @@ elif len(set(num_list)) == 2:
     print(num_list[0]*100+1000)
   elif num_list[0] == num_list[2]:
     print(num_list[1]*100+1000)
-  else:
+  elif num_list[1] == num_list[2]:
     print(num_list[2]*100+1000)
 elif len(set(num_list)) == 3:
   print(max(num_list)*100)
