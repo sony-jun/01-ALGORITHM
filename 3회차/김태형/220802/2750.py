@@ -6,5 +6,6 @@ N = int(input())
 A = []
 for i in range(N):
     A.append(int(input()))
-for i in range(N):
-    print(heappop(A))
+    A.sort()
+for i in A:
+    print(i)
