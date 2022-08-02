@@ -2,7 +2,6 @@
 import sys
 
 sys.stdin = open("2_TGN.txt")
-
 N = int(input())
 
 for i in range(N):

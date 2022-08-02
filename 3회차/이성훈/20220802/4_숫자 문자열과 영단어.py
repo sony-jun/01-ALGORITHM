@@ -3,7 +3,6 @@ import sys
 
 sys.stdin = open("4_숫자 문자열과 영단어.txt")
 
-
 def solution(s):
     
     

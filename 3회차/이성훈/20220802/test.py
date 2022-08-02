@@ -1,5 +1,6 @@
 import heapq
 
+
 N = 3
 
 list_2 = []

@@ -2,7 +2,6 @@
 import sys
 
 sys.stdin = open("3_수 정렬하기.txt")
-
 T = int(input())
 list_ = []
 

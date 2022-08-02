@@ -4,7 +4,6 @@ import heapq
 
 sys.stdin = open("1_절댓값 힙.txt")
 input = sys.stdin.readline
-
 n = int(input())
 
 heap = []
