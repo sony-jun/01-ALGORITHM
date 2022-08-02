@@ -23,7 +23,7 @@ for i in range(N):
     x = int(input())
     if x != 0:
         heapq.heappush(heap, x)
-        print(len(heap))
+        print(heap)
     else:
         if len(heap) == 0:
             heapq.heappop(heap)        
