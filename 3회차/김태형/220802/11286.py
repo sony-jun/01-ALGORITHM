@@ -9,6 +9,6 @@ N = int(sys.stdin.readline())
 for i in range(N):
     x = int(sys.stdin.readline())
     if x!=0:
-        heappush(Q,(abs(x),x))
+        heappush(Q,[abs(x),x])
     if x==0:
-        print("0" if len(Q)==0 else heappop(Q)[1])    
+        print("0" if len(Q)==0 else heappop(Q)[1])
