@@ -12,7 +12,7 @@ for test_case in range(1, T+1):
         if i == '(':
             lst.append(i)
         elif i == ')':
-            if '(' in lst:
+            if len(lst) != 0:
                 lst.pop()
             else : 
                 lst.append(i)
