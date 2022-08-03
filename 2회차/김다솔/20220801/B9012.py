@@ -23,4 +23,6 @@ for tc in range(1, T+1):
             print('NO')
         else:
             print('YES')   
-       
+
+#대표적인 stack 예제 
+# 왼쪽리스트 오른쪽리스트 만들어서       
