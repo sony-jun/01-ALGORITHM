@@ -12,14 +12,14 @@ while len(m) != 0:
     # 시작할때 stack에 아무것도 없으면 index range error
     if stack == [] and m[0] == 0:
         stack.append(m[0])
-        del m[0]    
+        del m[0]
     if i % 3 == 0:
         if stack[i] == 0 and m[0] == 1: 
             i += 1
             stack.append(m[0]) 
             del m[0]
-        else : 
-            del m[0] 
+        else :
+            del m[0]
     elif i % 3 == 1:
         if stack[i] == 1 and m[0] == 2:
             i += 1

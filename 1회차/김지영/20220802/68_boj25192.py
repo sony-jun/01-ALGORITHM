@@ -12,4 +12,4 @@ for i in range(log_line):
         # print(len(log),hi)
     log.add(state_name)
 hi += len(log)-1
-print(hi)
+print(hi) 
