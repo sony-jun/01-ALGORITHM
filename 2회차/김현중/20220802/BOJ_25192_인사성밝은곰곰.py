@@ -1,5 +1,4 @@
 import sys
-import heapq
 sys.stdin = open('25192.txt')
 input = sys.stdin.readline
 N = int(input())

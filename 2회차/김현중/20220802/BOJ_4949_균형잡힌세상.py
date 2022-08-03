@@ -2,8 +2,7 @@ import sys
 from collections import deque
 sys.stdin = open('4949.txt')
 input = sys.stdin.readline
-run = True
-while run:                              # run = True 인동안 반복
+while 1:
     line = input()
     lst = []
     if line == '.\n':                   # sys.stdin.readline 으로 입력을 받으면 \n 개행까지 입력을받음, .strip으로 날리면 ' .' == '.'이 되버림
