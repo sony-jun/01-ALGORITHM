@@ -4,6 +4,8 @@
 # 풀이
 croatia_alphabet = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
 word = input()
+
 for i in croatia_alphabet:
     word = word.replace(i, 'j')
+
 print(len(word))

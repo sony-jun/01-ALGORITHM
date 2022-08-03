@@ -1,8 +1,8 @@
 T = int(input())
-scores = [0]*101
 
 for i in range(T):
     t = input()
+    scores = [0]*101
     score = map(int, input().split())
     for j in score:
         scores[j] += 1

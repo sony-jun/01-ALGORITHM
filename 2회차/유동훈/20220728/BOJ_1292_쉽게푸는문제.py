@@ -12,8 +12,6 @@ while len(seq) < B:
         seq.append(N)
     N += 1
 
-print(seq)
-
 for j in range(A-1, B):
     sum_ += seq[j]
 
