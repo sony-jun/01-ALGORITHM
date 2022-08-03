@@ -1,17 +1,14 @@
 n = int(input())
-producer = []
+result = []
 
 for i in range(n):
-    strnum = str(i)
-    listnum = list(map(int,strnum))  #string도 iterable 하므로 list사용하지 않아도됨
-    if i+sum(listnum) == n:
-        producer.append(i)
-
-if producer != []:
-    print(min(producer))
-else:
+    strn = str(i)
+    sum_ = 0
+    for j in strn:
+        sum_+=int(j)
+    if i+sum_ == n :
+        result.append(i)
+if result == []:
     print(0)
-
-# listol = ['1','2','3','4']
-# listol= list(map(int,listol))
-# print(listol[0],type(listol[0]),sum(listol))
+else:
+    print(min(result))

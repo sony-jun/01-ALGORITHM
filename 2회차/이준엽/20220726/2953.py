@@ -1,5 +1,7 @@
 result = []
 for i in range(5):
     a,b,c,d = map(int,input().split())
-    result.append(a+b+c+d)
-print(result.index(max(result))+1,max(result))
+    score = a+b+c+d
+    result.append(score)
+high_score = max(result)    
+print(result.index(high_score)+1,high_score)
