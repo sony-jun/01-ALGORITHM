@@ -12,20 +12,20 @@
 # 단, 각 덩치 등수는 공백 문자로 분리되어야 함
 
 
-n = int(input())
-data = []
+# n = int(input())
+# data = []
 
-for i in range(n):
-    data.append(input().split())
-data_len = len(data)
-seq = []
+# for i in range(n):
+#     data.append(input().split())
+# data_len = len(data)
+# seq = []
 
-for i in range(data_len):
-    count = 1
-    for j in range(data_len):
-        if data[i][0] < data[j][0] and data[i][1] < data[j][1]:
-            count += 1
-    seq.append(count)
+# for i in range(data_len):
+#     count = 1
+#     for j in range(data_len):
+#         if data[i][0] < data[j][0] and data[i][1] < data[j][1]:
+#             count += 1
+#     seq.append(count)
 
-for i in seq:
-    print(i, end = ' ')
+# for i in seq:
+#     print(i, end = ' ')
