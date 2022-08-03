@@ -23,9 +23,13 @@ for i in range(n):
         # heap에 절댓값과 그냥 x를 저장
         heapq.heappush(heap,(abs(x),x))
 
+# 파이썬 최대 heap
+
+
+
+
 '''
-# 힙을 사용하지 않아 시간 초과
-N = int(input())
+N = int(input()) # 힙을 사용하지 않아 시간 초과
 
 min_idx = 0
 
@@ -85,6 +89,4 @@ for _ in range(N):
                 
                 list_abs_x.pop(min_idx)
                 print(list_x.pop(min_idx))
-                
-
 '''

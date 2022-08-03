@@ -9,3 +9,5 @@ for _ in range(N):
 
     elif cost_[0] > cost_[1] - cost_[2]:
         print('do not advertise')
+
+# list 대신 단순히 a,b,c에 숫자 할당 후 계산
