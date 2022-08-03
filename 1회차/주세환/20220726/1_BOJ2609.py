@@ -8,7 +8,7 @@ b1 = []
 for i in range(1, a+1):
     if a%i == 0:
         a1.append(i)
-
+# a 인수의 값 만큼 순회 하면서 a%i 한 나머지가 0이 아니면  a1리스트에 업데이트한다
 for j in range(1, b+1):
     if b%j == 0 :
         b1.append(j)
