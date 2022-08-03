@@ -19,7 +19,8 @@ for i in range(n):
     if 'X'not in castle[i]:     # 행에 경비가 아에 없을 경우 cnt +1
         cnt_n += 1
 for j in range(m):              
-    if 'X' not in [castle[i][j] for i in range(n)]: # [j]값이 고정인 상태로 [i]값이 반복되도록 하여 열에 경비가 없는지 확인
-        cnt_m += 1         
-
-print(max(cnt_n,cnt_m)) # 행 또는 열에 빈곳을 채우기 위해 두 카운트 숫자 중 큰 값을 출력해야 다 채울 수 있음 
+    if 'X' not in [castle[i][j] for i in range(n)]: # [j]값은 고정 [i]가 n만큼 반복되며 만들어진 [j]열 값 리스트
+        cnt_m += 1                                  # [j]열 리스트 안에 'X'가 없으면 cnt +1
+# 행과 열에 경비가 없는 곳을 채울때 행도 비어있고 열도 비어있을 경우
+# 1명이면 양측 모두 채워지므로 중복은 큰수 쪽에 포함으로 보고 카운트 값 중 큰 값을 출력
+print(max(cnt_n,cnt_m))  
