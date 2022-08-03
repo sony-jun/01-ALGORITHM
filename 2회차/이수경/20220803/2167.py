@@ -5,6 +5,16 @@
 import sys
 sys.stdin = open("2167.txt")
 
+'''
+2 3
+1 2 4
+8 16 32
+3
+1 1 2 3
+1 2 1 2
+1 3 2 3
+'''
+
 # N, M 주어짐
 N, M = map(int, input().split())
 matrix = []
@@ -27,5 +37,5 @@ for _ in range(k):
 
             # 매트릭스의 요소 중에서 해당 행, 열에 해당하는 값들을 더해줌
             sum += matrix[row][col]
-            
+
     print(sum)
