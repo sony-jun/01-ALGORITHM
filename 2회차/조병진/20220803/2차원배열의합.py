@@ -1,11 +1,7 @@
-import heapq
+# 2차원 배열의 합
+# 문제 : 2차원 배열에 저장되어 있는 수의 합 구하기
+
 import sys
-from pprint import pprint
-
-sys.stdin = open("input.txt")
-
-# ------- 밑에 입력 --------
-
 
 input = sys.stdin.readline
 
