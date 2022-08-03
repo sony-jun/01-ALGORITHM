@@ -19,5 +19,5 @@ def solution(s):
         answer = answer.replace(k, str(v))
     return int(answer)
 
-# S = input()
-# print(solution(S))
+S = input()
+print(solution(S))
