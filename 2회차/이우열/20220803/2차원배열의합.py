@@ -12,7 +12,7 @@ for i in range(1, n + 1):
             sum_[i][j - 1] - sum_[i - 1][j - 1]
 
 k = int(input())
-for i in range(k):
+for _ in range(k):
     i, j, x, y = map(int, input().split())
     print(sum_[x][y] - sum_[x][j - 1] -
           sum_[i - 1][y] + sum_[i - 1][j - 1])
