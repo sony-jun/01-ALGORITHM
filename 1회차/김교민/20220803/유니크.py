@@ -1,3 +1,4 @@
+from pprint import pprint
 import sys
 input = sys.stdin.readline
 
@@ -15,3 +16,22 @@ for i in range(n):
            cnt += score_l[i][j]
            
     print(cnt)
+    
+
+
+col_list=[]
+for x in range(3):
+    col = []
+    for y in range(5):
+        col.append(score_l[y][x])
+        
+    col_list.append(col)
+    
+score_list = [0]*5
+for x in range(3):
+    col = col_list[x]
+    for y in range(5):
+        score = col[y]
+        if col.count(score) == 1:
+            score_list[y] += score
+print(score_list)
