@@ -8,8 +8,8 @@ for test in range(1, T+1):
         result = 0
         if i % 2 == True:
             mul_ += (i * 2)
-            #print(mul_)
-        elif i % 2 == 0:
+            print(mul_)
+        if i % 2 == 0:
             i += sum_
             print(sum_)
         result = (mul_ + sum_)

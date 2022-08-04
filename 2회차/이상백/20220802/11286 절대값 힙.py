@@ -22,12 +22,11 @@ heap = []
 for i in range(N):
     x = int(input())
     if x != 0:
-        heapq.heappush(heap, x)
+        heapq.heappush(heap, [abs(x), x])
         print(heap)
     else:
         if len(heap) == 0:
-            heapq.heappop(heap)        
-            print(min(abs(heap)))
-
+            root = heapq.heappop(heap)
+            print(root[1])
 
 

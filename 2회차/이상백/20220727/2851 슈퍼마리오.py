@@ -31,3 +31,5 @@ for j in range(len(mush_point)):
       else:
           print(prev)
           break
+
+        

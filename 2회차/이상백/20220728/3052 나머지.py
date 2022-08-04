@@ -6,5 +6,6 @@ l = []
 for i in range(1, 11):
     num = int(input())
     l.append(num % 42)
+    
 
 print(len(set(l)))
