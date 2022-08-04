@@ -17,3 +17,19 @@ for i in range(3):
             player_[j] += scores[i][j]
 for s in player_:
     print(s)
+
+
+###################################################################
+##### 코드 풀이
+###################################################################
+# list_ = [[100,99,98], ]
+
+# col_list = []
+# for x in range(3):
+#     col = []
+#     for y in range(5):
+#         col.append(list_[y][x])
+
+#     col_list.append(col)
+
+# score_list = [0] *5
