@@ -17,7 +17,7 @@ for x in range(T):
                     continue
                 if matrix1[bx][by] == '*': #8 방향중에 폭탄이 있으면
                     cnt += 1 # cnt + 1
-            result[x][y] = cnt # 폭탄 갯수 만큼 결과 값에 '.' 대신 숫자 입력
+            result[x][y] = cnt # 8 방향 폭탄 갯수 만큼 결과 값에 '.' 대신 숫자 입력
         if matrix1[x][y] == '*' and matrix2[x][y] == 'x': # 사용자가 열었는데 폭탄이 있을 경우
             for j in range(T):
                 for k in range(T): # 모든 자리에 폭탄을 넣어야 함.
