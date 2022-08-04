@@ -9,5 +9,5 @@ for s1, a1 in zip(s, a): #zip을 활용해서 s,a 두 변수를 돌아주고
 print(new_string.count("SASA")) #count함수를 사용해서 출력
 
 # 2. 다른 방법
-# result = ''.join(map(''.join, zip(s, a)))
-# print(result.count("SASA"))
+result = ''.join(map(''.join, zip(s, a)))
+print(result.count("SASA"))

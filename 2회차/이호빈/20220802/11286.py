@@ -17,7 +17,7 @@ for _ in range(int(input())):
         # heap에 아무것도 없다면
         if len(heap) == 0:
             print(0)
-        # len(heap) != 0 heappop한 것을 출력
+        # len(heap) != 0 heappop한 것을 출력, 입력값을 출력되게 하게끔
         else:
             print(heapq.heappop(heap)[1])
         

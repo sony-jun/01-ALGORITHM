@@ -4,9 +4,10 @@ input = sys.stdin.readline
 
 T = int(input())
 
-#딕셔너리를 만들고
-dictionary = {}
+
 for i in range(T):
+    #딕셔너리를 만들고
+    dictionary = {}
     n = int(input())
     N = list(map(int, input().split()))
 
@@ -21,7 +22,7 @@ for i in range(T):
     for j in M:
         #M의 요소가 딕셔너리에 있으면
         if j in dictionary:
-            #해당 요소 value을 출력
-            print(dictionary[j])
+            #1을 출력
+            print(1)
         else:
             print(0)
