@@ -5,7 +5,6 @@ cnt2 = 0
 
 for n in range(N): # 세로
     if "X" not in castle[n]: # n : 0, 1, 2
-        print(castle[n])
         cnt1 += 1
 
 for m in range(M): # 가로
