@@ -1,14 +1,13 @@
-# https://www.acmicpc.net/problem/8958
 import sys
 
-sys.stdin = open("3_OX퀴즈.txt")
+sys.stdin = open("3_OX.txt")
 
 a = int(input())
 for i in range(a):
     b = input()
     s = list(b)
-    score = 0
-    sum_score = 0
+    score = 0 # 연속된 0의 개수
+    sum_score = 0 # 점수의 총합
     for ox in s:
         if  ox == 'O':
             score += 1
@@ -17,7 +16,7 @@ for i in range(a):
             score = 0
     print(sum_score)
 
-
+    
 # a = int(input())
 # for i in range(a):
 #     b = input()
