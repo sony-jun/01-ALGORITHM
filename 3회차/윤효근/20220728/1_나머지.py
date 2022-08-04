@@ -1,7 +1,5 @@
 import sys
-import collections
-
-sys.stdin = open("1_단어공부.txt")
+sys.stdin = open("1_나머지.txt")
 
 result=[]
 for i in range(10):
