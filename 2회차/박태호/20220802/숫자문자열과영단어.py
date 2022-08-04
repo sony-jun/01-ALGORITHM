@@ -13,10 +13,10 @@ def solution(s): # "one4seveneight"
         'zero','one','two','three','four',
         'five','six','seven','eight','nine'
     ] 
-    for i in range(len(ch)): # 인덱스로 접근예정
-        if ch[i] in s: # 입력받은 문자열에 'one'이런게 있다면
+    for i in range(len(ch)):                 # 인덱스로 접근예정
+        if ch[i] in s:                       # 입력받은 문자열에 'one'이런게 있다면
             answer = s.replace(ch[i],str(i)) # 문자를 품은 인덱스로 
-            s = answer # 반복할 s를 바꿔야 한다.
+            s = answer                       # 반복할 s를 바꿔야 한다.
     # answer = s.replace('one','1')
     return int(s) # 숫자로 출력
-print(solution('one4seveneight'))
+print(solution('one4seveneight')) #  '14seveneight' 'one47eight'
