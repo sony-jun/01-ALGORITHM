@@ -58,3 +58,30 @@ else:
     #아니면
     print('No')
     #No 출력
+
+
+
+##더 효율적인 코드
+#각 stack이 오름차순으로 잘 정렬되어 있는지만 확인해주면 된다.
+N, M = map(int, input().split())
+
+answer = 'Yes'
+#초기에 answer를 Yes로 둔다.
+for i in range(M):
+    #각 더미들을 돌면서
+    length = int(input())
+    stack = list(map(int, input().split()))
+
+    compare = stack.pop()
+    #비교 대상이 될(가장 작은) 수를 stack에서 pop해준다.
+    while len(stack) != 0:
+        #stack의 끝에 도달할 때까지
+        if stack[-1] > compare:
+            #stack의 다음 수가 비교 대상보다 크면 => 오름차순으로 잘 정렬되어 있으면
+            compare = stack.pop()
+            #다음 비교대상을 pop 한다.
+        else:
+            #그게 아니면 answer를 No로 바꾸고 break 한다.
+            answer = 'No'
+            break
+print(answer)

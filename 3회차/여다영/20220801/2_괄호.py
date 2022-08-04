@@ -21,3 +21,16 @@ import sys
 sys.stdin = open('2_괄호.txt', 'r')
 
 T = int(input())
+
+for i in range(T):
+    answer = 'Yes'
+
+    stack = []
+    string = input()
+
+    i = 0
+    while i <= len(string):
+        if string[i] == '(':
+            stack.append(string[i])
+        else:
+            stack.pop()
