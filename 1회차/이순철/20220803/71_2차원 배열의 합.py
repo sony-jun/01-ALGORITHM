@@ -12,14 +12,24 @@ sys.stdin = open('71_2차원 배열의 합.txt')
 
 n, m = map(int, input().split())
 pan = [list(map(int, input().split())) for _ in range(n)]
-# pprint(pan)
+# pprint(pan) 입력값들이 있는 2차원리스트
 area = int(input())
 area_list = [list(map(int, input().split())) for _ in range(area)]
-# pprint(area_list)
+# pprint(area_list) 합할 값들의 구역 좌표
 
-cnt_list = []
+cnt = 0
+# 값을 더할 카운트
 for h in range(area):
     i, j, x, y = area_list[h]
-    a = [pan[i-1][j-1] for j in range(1,m+1)]
-    b = [pan[x-1][y-1] for y in reversed(range(1,m+1))]
-    print(a,b,sep='\n')
+    # print(i, j, x, y)  좌표를 각각 할당
+    for a in range(i-1, x):
+    # 행의 좌표 구역 지정 [i-1] <= a <[x]
+    # 인덱스 값은 [0]부터 시작이고 구역 좌표는 1부터 시작이라 [i-1]
+        for b in range(j-1, y):
+        # 열의 좌표 구역 지정 [j-1] <= b < [y] 
+            cnt += pan[a][b]
+            # 해당 좌표를 pan[][]인덱스에 넣어 반환값을 더하며 카운트
+    print(cnt)
+    cnt = 0
+    # 더한 값을 출력하고 다음 구역 좌표 반복전 cnt 초기화
+
