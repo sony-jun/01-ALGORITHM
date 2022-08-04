@@ -1,19 +1,13 @@
 n,m = map(int,input().split())
 
-matrix = [list(map(str,input())) for i in range(n)]
+matrix = [list(map(str,input())) for _ in range(n)]
 
-row_index = []
-column_index = []
+row_index = 0
+column_index = 0
 
 for j in range(n):
-    if "X" not in matrix[j]:
-        row_index.append(j)
-new_matrix = []
-for i in zip(*matrix):
-    new_matrix.append(i)
-
-for l in range(m):
-    if "X" not in new_matrix[l]:
-        column_index.append(l)
-
-print(max(len(column_index),len(new_matrix)))
+    for i in range(m):
+        if "X" not in matrix[j]:
+            row_index+=1
+            if "X" not in matrix[j][i]:
+                pass

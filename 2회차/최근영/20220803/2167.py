@@ -9,13 +9,12 @@ K = int(sys.stdin.readline())
 compare_list = [list(map(int,sys.stdin.readline().split())) for __ in range(K)]
 
 for a in compare_list:
-    sum_list = []
+    sum_val=0
     y = a.pop()
     x = a.pop()
     j = a.pop()
     i = a.pop()
     for l in range(i-1,x):
         for k in range(j-1,y):
-            sum_list.append(matrix[l][k])
-    sum_list=sum(sum_list)
-    print(sum_list)
+            sum_val += matrix[l][k]
+    print(sum_val)
