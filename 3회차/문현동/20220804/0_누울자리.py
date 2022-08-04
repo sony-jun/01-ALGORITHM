@@ -11,7 +11,7 @@ for _ in range(N):
     room.append(sys.stdin.readline().rstrip())
 
 for row in room:
-    space = 0 # X 이전까지의 빈공간
+    space = 0
     for cell in row:
         if cell == '.':
             space += 1
