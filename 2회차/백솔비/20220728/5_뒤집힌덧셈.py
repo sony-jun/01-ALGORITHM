@@ -1,7 +1,7 @@
 import sys
 sys.stdin = open("5_뒤집힌덧셈.txt")
 
-X, Y = map(str, input().split())
+X, Y = input().split()
 
 RevX = int(X[::-1])
 RevY = int(Y[::-1])

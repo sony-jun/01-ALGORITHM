@@ -8,7 +8,7 @@ for i in range(1, T+1):
     stack = []
     answer = 'YES'
 
-    for j in N:
+    for j in N: 
         if j == '(':
             stack.append('(')
         else :
@@ -16,6 +16,7 @@ for i in range(1, T+1):
                 answer = 'NO'
             else: 
                 stack.pop()
+
 
     if len(stack) > 0 :
         answer = 'NO'
