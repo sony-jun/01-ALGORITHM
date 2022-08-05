@@ -14,6 +14,7 @@ mine_click = list(input() for _ in range(n)) # 사용자 클릭을 입력할 리
 mine_result = [['.'] * n for _ in range(n)] # 결과를 출력할 리스트 64
 
 # 열린 칸 주변에 지뢰가 몇개 있는지(열린칸에서 8방향을 탐색)
+# 델타 탐색
 # ...
 # .x.
 # ...
