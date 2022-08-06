@@ -21,14 +21,28 @@
 #여러분은 입력에 나열된 사람의 덩치 등수를 구해서 그 순서대로 첫 줄에 출력해야 한다. 
 #단, 각 덩치 등수는 공백문자로 분리되어야 한다.
 
+#원리
+#현재 내 덩치보다 작은 사람의 등수를 업 해준다.
+#그렇게 되면, 나와 덩치가 같은 사람은 자동으로 등수가 나와 같게 된다.
+
 import sys
 sys.stdin = open('4_덩치.txt', 'r')
 
 N = int(input())
-weight_and_height = []
-for i in range(N):
-    weight_and_height.append(list(map(int, input().split())))
 
+people = []
+for _ in range(N):
+    height, weight = map(int, input().split())
+    people.append((height, weight))
+
+rank = [0] * N
 for i in range(N):
-    for j in range(2):
-        if weight_and_height[i][j]
+    now = people[i]
+    for j in range(N):
+        compare = people[j]
+
+        if now[0] > compare[0] and now[1] > compare[1]:
+            rank[j] += 1
+
+for k in rank:
+    print(k + 1, end = ' ')
