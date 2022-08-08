@@ -1,10 +1,15 @@
+# format for SWEA 
+
 import sys
 sys.stdin = open("input.txt")
 T = int(input())
 for test_case in range(1,T+1):
 
-    print(f'#{test_case} ',result)
-##########################
+    print(f'#{test_case}',result)
+
+###################################3
+# matrix maker for ex
+
 from pprint import pprint
 n,m = map(int,input().split())
 result = []
@@ -13,3 +18,10 @@ for _ in range(n):
     result.append(temp)
 
 pprint(result)
+
+##################################
+# pprint definition
+
+def ppr(lst):
+    for i in lst:
+        print(i,end='\n')
