@@ -12,4 +12,3 @@ for i in range(N):
     qwe[0].append(a)
     qwe[1].append(b)
     qwe[2].append(c)
-pprint(qwe)
