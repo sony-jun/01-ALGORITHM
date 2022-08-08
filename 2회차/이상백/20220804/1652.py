@@ -27,7 +27,7 @@ for i in range(N):
         if matrix[j][i] == '.':
             cul += 1
         else:
-            cul = 0
+            cul = 0 # 초기화
         # '.'이 연속적으로 2개 이상 일 때 출력해줘야한다.
         if cul == 2:
             result[1] += 1
