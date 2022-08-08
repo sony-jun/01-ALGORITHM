@@ -6,7 +6,6 @@ matrix = [list(map(str,sys.stdin.readline().strip())) for _ in range(N)]
 
 vertical = 0
 horizon = 0
-print(matrix)
 for i in matrix:
     cnt = 0
     for j in range(len(i)):
