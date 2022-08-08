@@ -3,7 +3,6 @@ for _ in range(T):
     N, M = map(int, input().split())
     box = [list(map(int, input().split())) for _ in range(N)]
 
-
     box_col = []
     for i in range(M):
         temp = []

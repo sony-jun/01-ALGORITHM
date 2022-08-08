@@ -5,7 +5,7 @@ for _ in range(int(input())):
 
     if A == 1:
         sum += 5000000
-    elif 1< A <= 3:
+    elif 1 < A <= 3:
         sum += 3000000
     elif 3 < A <= 6:
         sum += 2000000
