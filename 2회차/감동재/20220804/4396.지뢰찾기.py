@@ -21,8 +21,11 @@ for i in range(T):
 
     if check==False:
         for i in range(T):
-            print("********")
+            for j in range(0,8):
+                print(map1[i][j],end = "")
         
+            print("")
+                
         break
     
 
@@ -46,12 +49,12 @@ if check :
 
 
 
-for i in range(T):
-    for j in range(8):
-        if map3[i][j] == -1:
-            print('.',end="")
-        else:
-            print(f"{map3[i][j]}",end="")
+    for i in range(T):
+        for j in range(8):
+            if map3[i][j] == -1:
+                print('.',end="")
+            else:
+                print(f"{map3[i][j]}",end="")
 
-    print("")
+        print("")
 
