@@ -16,7 +16,6 @@ for _ in range(int(input())):
             if box[i][j] == 1:
                 #층에서 i를 빼면 거리가 나온다.
                 step += floor - i
-                print(step)
                 #1층씩 빼준다.
                 floor -= 1
     
