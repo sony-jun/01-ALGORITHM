@@ -14,5 +14,6 @@ N, M = map(int, input().split())
 mi = 0
 
 
+
 # 첫째 줄에 추가해야 하는 경비원의 최솟값을 출력한다. mi
 print(mi)
