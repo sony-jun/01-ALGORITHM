@@ -26,3 +26,25 @@ for i in range(T):
         print('YES')
     else:
         print('NO')
+        
+#======================================
+# n = int(input())
+# left = '('
+# right = ')'
+
+# for i in range(n):
+#     ps = input()
+#     left_stack = []
+#     right_stack = []
+#     for j in ps:
+#         if j == left:
+#             left_stack.append(j)
+#         if j == right:
+#             if len(left_stack) != 0:
+#                 left_stack.pop()
+#             else:
+#                 right_stack.append(j)
+#     if len(left_stack) == 0 and len(right_stack) == 0:
+#         print('YES')
+#     else:
+#         print('NO')
