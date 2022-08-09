@@ -10,12 +10,14 @@ for i in range(N):
     for j in range(len(M)):
         if matrix[i][j] == '.':
             cnt1 += 1
-            if cnt1 == 2:
+            if j == len(M)-1:
+                if cnt1 >= 2:
+                    result1 += 1
+            
+        elif matrix[i][j] == 'X':
+            if cnt1 >= 2:
                 result1 += 1
-            elif cnt1 > 2:
-                break
-        else:
-            cnt1 = 0
+                cnt1 = 0
 
 
 result2 = 0
@@ -24,10 +26,12 @@ for j in range(len(M)):
     for i in range(N):
         if matrix[i][j] == '.':
             cnt2 += 1
-            if cnt2 == 2:
+            if i == N-1:
+                if cnt2 >= 2:
+                    result2 += 1
+            
+        elif matrix[i][j] == 'X':
+            if cnt2 >= 2:
                 result2 += 1
-            elif cnt2 > 2:
-                break
-        else:
-            cnt2 = 0
+                cnt2 = 0
 print(result1, result2)
