@@ -17,10 +17,6 @@ R, C = map(int, input().split())
 
 # 두 번째 줄에는 R개의 줄에 각각 C개의 문자가 주어진다. 이 문자는 '#', 'X', '.'로만 이뤄져 있다. 
 matrix = [list(input()) for _ in range(R)]
-# #..#
-# ..X.
-# ..X.
-# #XX#
 
 # pprint(matrix)
 # [['#', '.', '.', '#'],
@@ -28,6 +24,7 @@ matrix = [list(input()) for _ in range(R)]
 #  ['.', '.', 'X', '.'],
 #  ['#', 'X', 'X', '#']]
 
+# 마지막에 출력해야하는 n0 ~ n4라는 변수를 0으로 정의
 n0, n1, n2, n3, n4 = 0, 0, 0, 0, 0
 
 for x in range(R): # 행
