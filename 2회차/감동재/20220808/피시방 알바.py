@@ -6,10 +6,10 @@ check = 0
 
 for i in range(N):
     index = p[i]
-    if seat[index] == 1:
+    if seat[index-1] == 1:
         check+=1
     else:
-        seat[index] = 1
+        seat[index-1] = 1
 
 print(check)
 

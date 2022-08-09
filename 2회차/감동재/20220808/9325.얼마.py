@@ -6,7 +6,6 @@ for _ in range(0,T) :
     num_of_option = int(input())
 
     if num_of_option !=0:
-        print("in")
         for _ in range(0,num_of_option):
             amount , price = map(int,input().split())
             price_of_car += amount*price
