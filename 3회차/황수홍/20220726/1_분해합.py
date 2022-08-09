@@ -1,7 +1,9 @@
-n = int(input())
+N = int(input())
+result = 0
 
-for i in range(n):
-    cnt = 0
-    a = i + list
-    if a == n:
-        print(a)
+for i in range(1, N + 1):
+  tmp = i + sum(map(int,str(i)))
+  if tmp == N:
+    result = i
+    break
+print(result)
