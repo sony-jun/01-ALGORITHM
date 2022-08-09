@@ -34,17 +34,19 @@ while True:
         # root에서 up,down 판단, 반대방향 x
 
         # down
-        elif (root == [] or root[-1] != 'up') and grid[y+1][x] == '1':   # range error, y = 3, [y+1] cannot found index
+        elif y+1 < n and (root == [] or root[-1] != 'up') and grid[y+1][x] == '1':   # range error, y = 3, [y+1] cannot found index
             # 'right' or 'down' can continue.
             root.append('down')
             y += 1
         # up
-        elif (root == [] or root[-1] != 'down') and grid[y-1][x] == '1': 
+        elif y > 0 and (root == [] or root[-1] != 'down') and grid[y-1][x] == '1': 
             # 'righit or 'up' can continue.
             root.append('up')
             y -= 1
+    
 
         print(root)
+# 조건 덕지덕지 너무 싫다..엎을까..
 
 
 # 탐색
