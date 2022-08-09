@@ -11,6 +11,9 @@
 
 
 '''
+import sys
+from pprint import pprint
+sys.stdin = open("_오목.txt") 
 
 baduk = [list(map(int, input().split())) for _ in range(19)]
 
@@ -29,18 +32,16 @@ for i in range(19):
 
                 while 0 <= r < 19 and 0 <= c < 19 and baduk[r][c] == target:
                     cnt += 1
-
-                    if cnt == 5:
-                        if 0 <= i - dx[d] < 19 and 0 <= j - dy[d] < 19 and baduk[i-dx[d]][j-dy[d]] == target:
-                            break
-                        if 0 <= r + dx[d] < 19 and 0 <= c + dy[d] < 19 and baduk[r+dx[d]][c+dy[d]] == target:
-                            break
-                        valid = True
-                        print(target)
-                        print(i + 1, j + 1)
-                           
                     r += dx[d]
-                    c += dy[d]
+                    c += dy[d]           
+                
+                if cnt == 5:
+                    if 0 <= i - dx[d] < 19 and 0 <= j - dy[d] < 19 and baduk[i-dx[d]][j-dy[d]] == target:
+                        break
+                    valid = True
+                    print(target)
+                    print(i + 1, j + 1)
+                
 if not valid:
     print(0)
              
