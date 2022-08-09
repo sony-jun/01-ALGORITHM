@@ -231,3 +231,56 @@ else:    # break 없이 반복문이 끝난 경우, 아직 승부가 결정되�
 
 
 # 실행결과(메모리:30840KB, 시간:76ms)
+
+
+
+# 코드 3
+import sys
+
+sys.stdin = open('input_text/2615.txt')
+
+# 오목판 만들기
+matrix = [input().split() for _ in range(19)]
+
+# 오목판의 각 좌표를 둘러보기
+answer = 0   # 무승부로 초기값 설정
+for r in range(0, 18 + 1):
+    for c in range(0, 18 + 1):
+        if matrix[r][c] != '0':   # 바둑알(검은 바둑알, 흰 바둑알)이 있는 경우
+            # 델타 탐색(오른쪽, 아래, 우하향, 우상향 - 가장 왼쪽 또는 위에 있는 좌표를 출력해야하므로)
+            dr = [0, 1, 1, -1]
+            dc = [1, 0, 1, 1]
+            for i in range(4):
+                nr = r + dr[i]
+                nc = c + dc[i]
+                cnt = 1
+                while True:
+                    if 0 <= nr < 19 and 0 <= nc < 19 and matrix[nr][nc] == matrix[r][c]:
+                        cnt += 1
+                        nr += dr[i]
+                        nc += dc[i]
+                    else:
+                        break
+                if cnt == 5:
+                    # 이전 좌표 위치
+                    prev_r = r - dr[i]
+                    prev_c = c - dc[i]
+                    # 6목인지 확인
+                    if not (0 <= prev_r < 19 and 0 <= prev_c < 19) or matrix[prev_r][prev_c] != matrix[r][c]:
+                        answer = 1
+                        print(matrix[r][c])
+                        print(r + 1, c + 1)
+                        break
+            # 불필요한 반복 방지
+            if answer:
+                break
+    # 불필요한 반복 방지
+    if answer:
+        break
+
+if not answer:
+    print(0)
+
+
+
+# 실행결과(메모리:30840KB, 시간:76ms)
