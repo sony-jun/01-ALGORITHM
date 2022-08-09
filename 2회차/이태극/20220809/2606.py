@@ -8,7 +8,9 @@ for _ in range(m):							# 연결된 컴퓨터 쌍의 수만큼 반복
     graph[x].append(y)
     graph[y].append(x)
 
-visited = [0] * (n+1)	# 방문처리 : 방문한 컴퓨터 수를 출력해야하므로 visited 에 True/False가 아닌 0/1로 처리
+visited = [0] * (n+1)	
+# 방문처리 : 
+#방문한 컴퓨터 수를 출력해야하므로 visited 에 True/False가 아닌 0/1로 처리
 
 def dfs(graph, v, visited):
     visited[v] = 1
@@ -19,4 +21,3 @@ def dfs(graph, v, visited):
 
 dfs(graph, 1, visited)
 print(sum(visited)-1)	# 방문한 컴퓨터 개수 - 1번 컴퓨터
-#print(graph)
