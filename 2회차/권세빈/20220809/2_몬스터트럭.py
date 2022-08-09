@@ -9,11 +9,8 @@ car = [0]*5
 
 for i in range(r-1):
     for j in range(c-1):
-        t = []
-        t.append(p[i][j])
-        t.append(p[i][j+1])
-        t.append(p[i+1][j+1])
-        t.append(p[i+1][j])
-
-        if '#' not in t:
-            if t.count('X')
+        l = p[i][j] + p[i][j+1] + p[i+1][j] + p[i+1][j+1]
+        if '#' not in l:
+            car[l.count('X')] += 1
+for i in car:
+    print(i)
