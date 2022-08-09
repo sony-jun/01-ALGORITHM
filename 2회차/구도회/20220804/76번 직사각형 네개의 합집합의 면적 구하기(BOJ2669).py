@@ -10,5 +10,3 @@ answer = 0
 for k in matrix: #matrix에 모든 수를 더해준다.
     answer += sum(k)
 print(answer)
-    
-
