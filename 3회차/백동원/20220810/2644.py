@@ -1,4 +1,4 @@
-# 촌수계산 미해결
+# 촌수계산 
 # def dfs(node):
 #     for n in matrix[node]:
 #         if visited[n] == 0:
