@@ -11,7 +11,7 @@ for _ in range(M):
     graph[v2].append(v1)
 
 
-discovered = []
+discovered = []  
 def dfs(start):
     stack = [start]
     while stack:

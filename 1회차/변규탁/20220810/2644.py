@@ -1,31 +1,28 @@
-N = int(input())
-
+n = int(input())
 A, B = map(int, input().split())
+m = int(input())
 
-M = int(input())
+graph = [[] for _ in range(n+1)]
 
-graph = [[] for _ in range(N+1)]
-
-for _ in range(M):
+for _ in range(m):
     x, y = map(int, input().split())
     graph[x].append(y)
     graph[y].append(x)
 
+visited = [False] * (n+1) 
 
-def dfs(start, count):
-    discover = []
+# 촌수 리스트를 따로 만들어서 모든사람의 촌수가 들어간다.
+chon = [-1] * (n+1)  
+
+def dfs(start):
     stack = [start]
-    count = 0
+    chon[start] = 0
     while stack:
         v = stack.pop()
-         
-        if v == B:
-            print(count)
-            break 
-        if v not in discover:
-            discover.append(v)
-            for w in graph[v]:
+        for w in graph[v]:
+            if not visited[w]:
+                visited[w] = True
+                chon[w] = chon[v] + 1
                 stack.append(w)
-        count += 1
-
-dfs(A, 0)
+dfs(A)
+print(chon[B])
