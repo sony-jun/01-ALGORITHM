@@ -9,8 +9,8 @@ for i in range(N):
     score = 0 
     total_score = 0
     for j in range(len(test_case)):
+        score +=1
         if test_case[j]=='O':
-            score +=1
             total_score += score
         else:
             score = 0

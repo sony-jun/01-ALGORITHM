@@ -15,3 +15,22 @@ for _ in range(N):
         print("YES")
     else:
         print("NO")
+
+N=int(input())
+left =[]
+right = []
+for i in range(N):
+    list = list(input())
+    for j in list:
+        if j == '(':
+            left.append(j)
+        if j == ')':
+            right.append(j)
+            if len(left) != 0:
+                left.pop()
+            else:
+                right.append(j)
+if len(left) == 0 and len(right) == 0:
+    print("YES")
+else :
+    print('NO')
