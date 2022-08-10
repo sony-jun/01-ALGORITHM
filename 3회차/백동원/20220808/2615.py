@@ -1,69 +1,35 @@
-# 오목
+# 오목 미해결
+import sys
+board = []
+for i in range(19):
+    board.append(list(map(int, input().split())))
 
-dx = [-1, 1, -1, 0, 1, 1, 1, 0]
-dy = [-1, 0, 1, 1, 1, 0, -1, -1]
-omok = [list(map(int, input().split())) for _ in range(19)]
-winner = 0
-for a in range(19):
-    for b in range(19):
-        if omok[a][b] == 1:
-            for c in range(8):
-                cnt = 1
-                if (19 > a + dy[c] >= 0) and (19 > b + dx[c] >= 0):
-                    bx = b + dx[c]
-                    ay = a + dy[c]
-                    if omok[ay][bx] == 1:
-                        cnt += 1
-                        while True:
-                            if (19 > ay + dy[c] >= 0) and (19 > bx + dx[c] >= 0):
-                                if omok[ay + dy[c]][bx + dx[c]] == 1:
-                                    ay += dy[c]
-                                    bx += dx[c]
-                                    cnt += 1
-                                else:
-                                    if cnt == 5:
-                                        winner = 1
-                                        print(winner)
-                                        print(a + 1, b + 1)
-                                        cnt = 1
-                                        break
-                            else:
-                                break
-                        if cnt == 5:
-                            winner = 1
-                            print(winner)
-                            print(a + 1, b + 1)
-        else:
-            cnt = 1
+dx = [0, 1, 1, -1]
+dy = [1, 0, 1, 1]
 
-        if omok[a][b] == 2:
-            for c in range(8):
+for x in range(19):
+    for y in range(19):
+        if board[x][y] != 0:
+            focus = board[x][y]
+
+            for i in range(4):
                 cnt = 1
-                if (19 > a + dy[c] >= 0) and (19 > b + dx[c] >= 0):
-                    bx = b + dx[c]
-                    ay = a + dy[c]
-                    if omok[ay][bx] == 2:
-                        cnt += 1
-                        while True:
-                            if (19 > ay + dy[c] >= 0) and (19 > bx + dx[c] >= 0):
-                                if omok[ay + dy[c]][bx + dx[c]] == 2:
-                                    ay += dy[c]
-                                    bx += dx[c]
-                                    cnt += 1
-                                else:
-                                    if cnt == 5:
-                                        winner = 2
-                                        print(winner)
-                                        print(a + 1, b + 1)
-                                        cnt = 1
-                                        break
-                            else:
-                                break
-                        if cnt == 5:
-                            winner = 2
-                            print(winner)
-                            print(a + 1, b + 1)
-        else:
-            cnt = 1
-if winner == 0:
-    print(winner)
+                nx = x + dx[i]
+                ny = y + dy[i]
+
+                while 0 <= nx < 19 and 0 <= ny < 19 and board[nx][ny] == focus:
+                    cnt += 1
+
+                    if cnt == 5:
+                        if 0 <= x - dx[i] < 19 and 0 <= y - dy[i] < 19 and board[x - dx[i]][y - dy[i]] == focus:
+                            break
+                        if 0 <= nx + dx[i] < 19 and 0 <= ny + dy[i] < 19 and board[nx + dx[i]][ny + dy[i]] == focus:
+                            break
+                        print(focus)
+                        print(x + 1, y + 1)
+                        sys.exit(0)
+
+                    nx += dx[i]
+                    ny += dy[i]
+
+print(0)
