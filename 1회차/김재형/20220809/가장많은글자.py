@@ -1,6 +1,7 @@
 import sys
 sys.stdin = open('가장많은글자_input.txt')
 
+
 alphabet = {
     'a' : 0,    'b' : 0,    'c' : 0,
     'd' : 0,    'e' : 0,    'f' : 0,
@@ -12,6 +13,8 @@ alphabet = {
     'v' : 0,    'w' : 0,    'x' : 0,
     'y' : 0,    'z' : 0,    ' ' : 0
 }
+
+
 n = 0
 while n != 51:
     try:
