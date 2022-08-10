@@ -14,8 +14,8 @@
 
 # 1번 컴퓨터를 통해 웜 바이러스에 걸리게 되는 컴퓨터의 수 출력
 
-from inspect import stack
 import sys
+from tracemalloc import start
 sys.stdin = open('바이러스.txt')
 
 com = int(input())
@@ -28,43 +28,33 @@ for _ in range(comPairs):
     u, v = map(int, input().split())
 
     comPairsList[u].append(v)
-    comPairsList[v].append(u) 
-
-count = 0
-visited = [0] * (com + 1)
-
-def dfs(start):
-    global count
-    visited[start] = 1
-
-    for i in comPairsList[start]:
-        if visited[i] == 0:
-            dfs(i)
-            count += 1
-    
-dfs(1)
-print(count)
-
-#! -------------------------------------------
+    comPairsList[v].append(u)
 
 #* 방문 처리 리스트 만들기
 visited = [False] * com
+#* 개수를 셀 변수
+count = 0
 
-#* 시작 정점 방문 처리
-visited[0] = True
-#* 돌아갈 곳 기록
-stack = [0]
+def dfs(start):
+    #* 돌아갈 곳 기록
+    stack = [start]
+    #* 시작 정점 방문 처리
+    visited[start] = True
 
-#* 스택이 빌 때까지(돌아갈 곳이 없을 때까지) 반복
-while stack:
-    #* 현재 방문 정점(후입선출)
-    current = stack.pop()
+    #* 스택이 빌 때까지(돌아갈 곳이 없을 때까지) 반복
+    while stack:
+        #* 현재 방문 정점
+        current = stack.pop()
 
-#* 인접한 모든 정점에 대해
-for adj in comPairsList[current]:
-    #* 아직 방문하지 않았다면
-    if not visited[adj]:
-        #* 방문 처리
-        visited[adj] = True
-        #* 스택에 넣음
-        stack.append(adj)
+        #* 인접한 모든 정점에 대해
+        for adj in comPairsList[current]:
+            #* 아직 방문하지 않았다면
+            if not visited[adj]:
+                #* 방문 처리
+                visited[adj] = True
+                #* 스택에 넣기
+                stack.append(adj)
+
+#* 0번 정점에서 시작
+# dfs(0)
+# print()
