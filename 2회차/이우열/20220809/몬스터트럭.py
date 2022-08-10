@@ -22,13 +22,12 @@ for y in range(r):
                 if not (-1 < ny < r and -1 < nx < c):
                     break
 
-                if -1 < ny < r and -1 < nx < c:
-                    if park[ny][nx] == '#':
-                        break
+                if park[ny][nx] == '#':
+                    break
 
-                    s += park[ny][nx]
+                s += park[ny][nx]
 
-            if len(s) == 4:
+            else:
                 result[s.count('X')] += 1
 
 print(*result, sep='\n')
