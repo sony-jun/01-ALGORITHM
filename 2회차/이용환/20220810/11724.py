@@ -9,16 +9,6 @@ for _ in range(M):
     matrix[edge].append(num)
 visited = [False] * N
 cnt = 0
-
-# def dfs(i):
-#     stack = [i]
-#     visited[i] = True
-#     while stack:
-#         virus = stack.pop()
-#         for i in matrix[virus]:
-#             if not visited[i]:
-#                 visited[i] = True
-#                 stack.append(i)
 for j in range(1, N):
     if not visited[j]:
         stack = [j]
