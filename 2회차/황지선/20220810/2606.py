@@ -17,15 +17,15 @@ N = int(input())
 # 둘째 줄에는 네트워크 상에서 직접 연결되어 있는 컴퓨터 쌍의 수가 주어진다. # 간선의 갯수
 M = int(input())
 
-graph2 = [[] * N for _ in range(N+1)]
+graph = [[] * N for _ in range(N+1)]
 
 for _ in range(M):
     # 이어서 그 수만큼 한 줄에 한 쌍씩 네트워크 상에서 직접 연결되어 있는 컴퓨터의 번호 쌍이 주어진다. # 간선들
     u, v = map(int, input().split())
-    graph2[v].append(u)
-    graph2[u].append(v)
+    graph[v].append(u)
+    graph[u].append(v)
 
-# pprint(graph2)  # 인접 리스트
+# pprint(graph)  # 인접 리스트
 # ----------------------------------------
 # DFS
 
@@ -34,17 +34,20 @@ count = 0
 visited = [False] * (N+1)
 
 def dfs(start):
-    # 함수 밖에서 선언한 변수를 쓰기 위해서
+    # 함수 밖에서 선언한 변수를 같이 쓰기 위해서
+    # count 라는 전역변수가 만들어진다! 함수의 실행이 끝난 후에도 없어지지 않는다!
     global count
+    # 1번 컴퓨터는 방문처리
     visited[start] = True
 
-    for i in graph2[start]:
-        # 들리지 않은 정점이면 dfs 함수를 이용해서 다시 반복
+    # 위에서 만든 인접 리스트 graph를 돌면서
+    for i in graph[start]:
+        # 들리지 않은 정점이면 (False 상태) dfs 함수를 이용해서 다시 반복
         if visited[i] == False:
-            # 재귀
+            # 재귀를 이용해서 해당 컴퓨터를 방문처리한 후 count + 1
             dfs(i)
-            count +=1
- 
+            count += 1
+
 # 1번 정점에서 시작
 dfs(1)
 print(count)
