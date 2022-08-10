@@ -2,14 +2,13 @@ n = []
 for i in range(0,5):
     n.append(list(map(int,input().split()))) 
 
-
-_max = 0
 index = 0
+_max = 0
 
-tmp = []
 cnt = 0
 
 for a in n:
+    cnt+=1
     s = sum(a)
     if s > _max:
         _max = s
