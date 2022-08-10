@@ -1,6 +1,6 @@
 from re import L
 import sys
-sys.stdin = open("26_유니크.txt")
+sys.stdin = open("27_유니크.txt")
 
 
 T = int(input())
@@ -14,7 +14,7 @@ for i in range(T):
     sum = 0
     for j in range(3):
         if li[j].count(li[j][i]) > 1:
-            sum += 0
+            continue
         else:
             sum += li[j][i]
     print(sum)
