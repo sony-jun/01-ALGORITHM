@@ -11,6 +11,7 @@ while True:
             arr.append([c, num])
         arr.sort(key=lambda x: (-x[1], x[0]))
         max_val = arr[0][1]
+        max_value=max(dic.values())
         result = ''
         for c, num in arr:
             if num == max_val:
