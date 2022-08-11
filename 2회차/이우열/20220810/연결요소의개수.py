@@ -12,25 +12,20 @@ for _ in range(m):
     graph[u].append(v)
     graph[v].append(u)
 
-
-def dfs(start):
-    visited[start] = True
-    stack.append(start)
-
-    while stack:
-        cur = stack.pop()
-
-        for adj in graph[cur]:
-            if not visited[adj]:
-                visited[adj] = True
-                stack.append(adj)
-
-
 cnt = 0
 
 for i in range(1, n + 1):
-    if visited[i] == False:
-        dfs(i)
+    if not visited[i]:
+        visited[i] = True
+        stack.append(i)
         cnt += 1
+
+        while stack:
+            cur = stack.pop()
+
+            for adj in graph[cur]:
+                if not visited[adj]:
+                    visited[adj] = True
+                    stack.append(adj)
 
 print(cnt)
