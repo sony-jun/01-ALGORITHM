@@ -9,7 +9,7 @@ engage = S,K,H # 작성하기 쉽도록 다른 변수에 저장
 
 sum_engage = sum(engage) # 참여도의 합
 
-# 참여도의 합이 100 이하이면
+# 참여도의 합이 100 미만이면
 if sum_engage<100:
 # 참여도가 가장 작은 대학 지목 : 리스트에서 참여도의 최솟값과 비교
     if engage[0]==min(engage): 
