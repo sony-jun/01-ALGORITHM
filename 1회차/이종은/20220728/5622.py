@@ -1,3 +1,5 @@
+# 다이얼 
+
 
 alpabet = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PORS', 'TUV', 'WXYZ']
 word = input()
@@ -10,4 +12,7 @@ for i in alpabet :
                 time += alpabet.index(i) + 3 # 다이얼 자리가 각 인덱스값에서 +3이기 때문에 
 
 print(time)
+
+
+# 딕셔너리 사용하는 코드 => 문제 쉽게 풀 수 있음
 

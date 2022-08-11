@@ -1,4 +1,4 @@
-
+# 분해합
 n = int(input())
 
 result = 0
