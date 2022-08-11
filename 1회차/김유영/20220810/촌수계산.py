@@ -5,7 +5,7 @@ sys.stdin = open("/Users/yuyeong/Desktop/알고리즘/01-ALGOR
 
 n = int(input())
 a, b = map(int, input().split())
-m = int(int(input()))
+m = int(input())
 graph = [[] for _ in range(n+1)]
 visited = [False] * (n+1)
 result = [0] * (n+1)
