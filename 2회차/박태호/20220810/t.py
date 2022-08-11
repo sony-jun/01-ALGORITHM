@@ -1,4 +1,3 @@
-a=[False, True, True, False, False, True, False, False]
-
-for i in range(1,len(a)):
-    print(a[i])
+a=[1,[]]
+if a[1]:
+    print(a[1])

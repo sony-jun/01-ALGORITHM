@@ -1,4 +1,3 @@
-
 import sys
 sys.stdin = open('소가길을건너간이유1.txt','r')
 dic={}
@@ -12,5 +11,4 @@ for _ in range(n):
         if loc != dic[cow]:
             cnt += 1
             dic[cow] = loc
-
 print(cnt)
