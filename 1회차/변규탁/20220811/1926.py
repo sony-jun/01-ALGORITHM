@@ -13,7 +13,6 @@ def dfs(i,j):
         maps[i][j] = 0
         while stack:
             x, y = stack.pop()
-
             for d in range(4):
                 nx = x + dx[d]
                 ny = y + dy[d]
