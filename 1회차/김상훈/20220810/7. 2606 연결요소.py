@@ -27,7 +27,7 @@ for i in range(1, N+1):
     if visited[i] == False:
         result += 1
         dfs(i)
-print(graph)       
+     
 print(result)
     
             
