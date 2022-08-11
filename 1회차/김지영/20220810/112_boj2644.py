@@ -8,17 +8,17 @@ for _ in range(edge):
     graph_list[u].append(v)
     graph_list[v].append(u)    
 
-print(graph_list) 
+# print(graph_list) 
 
 visited = [False]* (n+1) # node를 읽을때마다 visited reset
 result = [0] *(n+1) # start node에서 index n번째 노드를 방분하는 횟수를 리스트로 가진 result
 
 def dfs(s):
     visited[s] = True
-    print(visited)
+    # print(visited)
     for i in graph_list[s]: 
         if not visited[i]: # visited[i] == False?
-            print(result)
+            # print(result)
             result[i] = result[s] + 1
             dfs(i)
 
