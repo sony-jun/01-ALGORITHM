@@ -1,11 +1,19 @@
 N = int(input())
 
+
+dic = {}
+
+cnt = 0
+
 for i in range(N):
-    M = num, location = map(int, input().split())
+    num, location = map(int, input().split())
 
-    cnt = 0
-
-    if num == 1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9 or 10:
-        if location != 2:
+    if num not in dic:
+        dic[num] = location
+    
+    else: # dic 안에 값과 다른 값이 들어온다면
+        if dic[num] != location:
             cnt += 1
-    print(cnt)
+            dic[num] = location
+
+print(cnt)

@@ -13,5 +13,3 @@ b.sort(reverse= True)
 W = a[0] + a[1] + a[2]
 K = b[0] + b[1] + b[2]
 print(W, K)
-# W = str(max(a[0] + a[1] + a[2]))
-# K = str(max(b[0] + b[1] + b[2]))

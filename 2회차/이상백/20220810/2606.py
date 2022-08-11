@@ -22,4 +22,4 @@ for _ in range(E):
             if not visited[adj]:
                 visited[adj] = True
                 stack.append(adj)
-print(visited)
+print(sum(visited) -1)
