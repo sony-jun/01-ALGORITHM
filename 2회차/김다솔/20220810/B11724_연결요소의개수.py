@@ -8,3 +8,11 @@ for _ in range(E):
     graph[v1].append(v2)
     graph[v2].append(v1)
 # print(graph)
+
+#모든노드에서 출발을 해볼건데 
+#시작을 한 횟수 ? 
+ans = 0
+for start in range(1, n + 1):
+    if not visited[start]:
+        
+    
