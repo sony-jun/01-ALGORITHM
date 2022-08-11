@@ -12,7 +12,7 @@ for i in range(3):
         dict[i]=0
     for i in dict:
         for j in range(len(l)):
-            if i==l[j] and l[j-1]==l[j]:
+            if i==l[j] and l[j-1]==l[j]: # 문제발생
                 dict[i]+=1
             else:
                 continue
