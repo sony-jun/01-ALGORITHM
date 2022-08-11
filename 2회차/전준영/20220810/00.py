@@ -21,11 +21,8 @@ while bo:
             break
     while stack:
         temp=stack.pop()
-        print(temp)
-        print(stack)
         for i in temp:
             if(answer[i[0]]!=0 and answer[i[1]]==0):
                 answer[i[1]]=answer[i[0]]
-                print(i)
                 stack.append(array[i[1]])
 print(cnt)

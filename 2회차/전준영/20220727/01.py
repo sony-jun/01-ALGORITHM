@@ -19,7 +19,6 @@ def croatia(str0):
                 answer-=1
         temp1=temp0
         temp0=i
-        print(answer)
     return answer
 sys.stdin=input()
 print(croatia(sys.stdin))

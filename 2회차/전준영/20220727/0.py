@@ -1,6 +1,6 @@
 import sys
 sys.stdin=input()
-str_input=sys.stdin.lower()
+str_input=sys.stdin.upper()
 str_diction={}
 max=0
 max_num=0

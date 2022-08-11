@@ -15,6 +15,6 @@ for i in range(T):
     if(bo==1 and cnt==0):
         answer.append("YES")
     else:
-        answer.append("No")
+        answer.append("NO")
 for k in answer:
     print(k)

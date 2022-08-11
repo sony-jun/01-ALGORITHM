@@ -25,7 +25,7 @@ for __ in range(input0):
     answer.append(temp2)
 for an in answer:
     print(an)
-print(temp)
+
 #import sys
 #input=sys.stdin.readline
 #line=list(map(int,input().split()))

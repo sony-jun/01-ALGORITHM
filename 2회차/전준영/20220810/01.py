@@ -8,12 +8,12 @@ for _ in range(M):
     a,b=map(int,input().split())
     arr[a].append(b)
     arr[b].append(a)
-boo=[0]*(T+1)
+boo=[0]*(T+1)#검사한 노드를 표시한다
 cnt=0
 stack0=[]
 stack1=[]
 an=0
-stack0.append(arr[a0])
+stack0.append(arr[a0])#두 노드중 하나에서부터 시작한다
 ss0=[]
 ss0.append(a0)
 if(a0!=b0):
