@@ -21,17 +21,19 @@ for i in relation:
     adjacent_list[i[1]].append(i[0])
 
 visited = [0] * (N + 1)
+visited[r1] = 1 
+stack = [[r1, 0]]
 
-cnt = 0
-stack = [r1]
-run = True
-
-print(adjacent_list)
-
-while stack and run: # r1 에 대한 while 문
+while stack:
     current = stack.pop(0)
-    for j in adjacent_list[current]:
+    if current[0] == r2:
+        break
+    for j in adjacent_list[current[0]]:
         if not visited[j]:
-            cnt += 1
             visited[j] = 1 
-            stack.append(j)
+            stack.append([j, current[1] + 1])
+
+if current[0] == r2:
+    print(current[1])
+else:
+    print(-1)
