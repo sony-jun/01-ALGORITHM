@@ -1,22 +1,7 @@
 # 연결 요소의 개수 = 연결되지 않은 것들
-# BFS를 한 번 돌려서 연결된 것들은 True, 연결되지 않으면 False
+# dFS를 한 번 돌려서 연결된 것들은 True, 연결되지 않으면 False
 # False인 원소중 하나를 골라 BFS를 돌려 연결되면 True, 연결되지 않으면 False 카운트 +1
 # True가 없어질 떄까지 반복
-
-# 정점 개수 n, 간선 개수 m 입력
-n, m = map(int, input().split())
-
-# 각 정점마다 간선을 입력할 간선 리스트 선언
-# 1부터 시작하므로 정점 개수 +1
-list_ = [[] for _ in range(n+1)]
-
-# 방문을 기록할 리스트 선언
-visited = [False] * (n+1)
-
-for _ in range(m):
-    a, b = map(int, input().split())
-    list_[a].append(b)
-    list_[b].append(a)
 
 def dfs(start):
     # 시작하는 노드를 스택에 넣고
@@ -36,9 +21,27 @@ def dfs(start):
                 visited[adj] = True
                 stack.append(adj)
 
+
+# 정점 개수 n, 간선 개수 m 입력
+n, m = map(int, input().split())
+
+# 각 정점마다 간선을 입력할 간선 리스트 선언
+# 1부터 시작하므로 정점 개수 +1
+list_ = [[] for _ in range(n+1)]
+
+# 방문을 기록할 리스트 선언
+visited = [False] * (n+1)
+
+for _ in range(m):
+    a, b = map(int, input().split())
+    list_[a].append(b)
+    list_[b].append(a)
+
 cnt = 0
 
-# visited[i]에서 False가 사라질 때까지
+# visited[i]에서 False가 사라질 때까지 반복
+# visited가 반영이 될까? - 반영 됨.
+# 변수에 대한 공부가 필요할 것 같음
 for i in range(1, n+1):
     if visited[i] == False:
         dfs(i)
