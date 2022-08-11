@@ -1,4 +1,7 @@
 # https://www.acmicpc.net/problem/2644
+
+# 스택으로 푸는 방법(수업)도 정리하기!
+
 # 입력에서 요구한 두 사람의 촌수를 나타내는 정수를 출력한다. 
 # 어떤 경우에는 두 사람의 친척 관계가 전혀 없어 촌수를 계산할 수 없을 때가 있다. 
 # 이때에는 -1을 출력해야 한다.
@@ -9,8 +12,8 @@ sys.stdin = open("2644.txt")
 # 첫째 줄에는 전체 사람의 수 N(정점의 수)
 N = int(input())
 
-# 둘째 줄에는 촌수를 계산해야 하는 서로 다른 두 사람의 번호 A, B
-A, B = map(int, input().split())
+# 둘째 줄에는 촌수를 계산해야 하는 서로 다른 두 사람 start, end
+start, end = map(int, input().split())
 
 # 셋째 줄에는 부모 자식들 간의 관계의 개수 M(간선의 수)
 M = int(input())
@@ -34,8 +37,8 @@ def dfs(v, num):  # 매개변수 v, num에 대하여
     num += 1      # 깊이가 깊어질 때마다 num 값 1씩 증가
     visit[v] = 1  # 시작되는 정점은 방문 처리(1 == True)
 
-    # v == B 일땐 num 값을 result 에 저장
-    if v == B:
+    # v == end 일땐 num 값을 result 에 저장
+    if v == end:
         result.append(num)
 
     # 매개변수 v와 연결된 사람들에 대하여 순회할 때,
@@ -46,8 +49,8 @@ def dfs(v, num):  # 매개변수 v, num에 대하여
             dfs(i, num)
 
 # [DFS 함수 호출하기]
-# dfs(v, num) -> dfs(A, 0) -> 인접 리스트에서 A에 연결된 사람 탐색, num 값은 0부터 시작            
-dfs(A, 0)
+# dfs(v, num) -> dfs(start, 0) -> 인접 리스트에서 A에 연결된 사람 탐색, num 값은 0부터 시작            
+dfs(start, 0)
 
 # result 에 저장된 값이 없다는 것은(if len(result) == 0:)
 # 친척 관계가 없어서 촌수 계산이 안된 것이므로 -1 출력

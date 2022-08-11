@@ -1,12 +1,28 @@
 # https://www.acmicpc.net/problem/2644
 
+# 스택으로 푸는 방법(수업)도 정리하기!
+
 # 촌수 찾기
+
+'''
+[입력예시]
+9
+7 3
+7
+1 2
+1 3
+2 7
+2 8
+2 9
+4 5
+4 6
+'''
 
 import sys
 sys.stdin = open("2644.txt")
 
 N = int(input())
-A, B = map(int, input().split())
+start, end = map(int, input().split())
 M = int(input())
 
 graph = [[] for _ in range(N+1)]
@@ -22,14 +38,14 @@ def dfs(v, num):
     num += 1
     visit[v] = 1
 
-    if v == B:
+    if v == end:
         result.append(num)
 
     for i in graph[v]:
         if not visit[i]:
             dfs(i, num)
           
-dfs(A, 0)
+dfs(start, 0)
 
 if len(result) == 0:
     print(-1)
