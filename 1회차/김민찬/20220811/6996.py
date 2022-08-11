@@ -12,7 +12,7 @@ for i in range(T):
 
     # A에 속한 알파벳의 순서를 바꿔서 B를 만들 수 있다면 -> 애너그램
     if x == y: # 정렬한 결과가 같으면
-        #s 사용해서 문자열 출력
+        # %s 사용해서 문자열 출력
         # %(A, B) 를 사용해서 A의 문자열, B의 문자열이 오게 설정
         print("%s & %s are anagrams." %(A, B)) # anagrams으로 출력
     else: # 같지 않다면
