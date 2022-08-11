@@ -57,3 +57,21 @@ print(ans)
 
 # n1, n2 = map(int, input().split())
 # print(Rev(Rev(n1) + Rev(n2)))
+
+#===========================
+
+# x, y = input().split()
+
+# r_x = ''
+# r_y = ''
+# for i in x[::-1]:
+#     r_x += i
+# for j in y[::-1]:
+#     r_y += j
+    
+# sum_ = int(r_x) + int(r_y)
+
+# r_sum_ = ''
+# for k in str(sum_)[::-1]:
+#     r_sum_ += k
+# print(int(r_sum_))
