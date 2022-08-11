@@ -28,14 +28,13 @@ while True:
 
     # w(너비)*h(높이)로 입력된 matrix 는 이차원 격자로,
     # 이중 for문 작성해서 x,y 좌표가 매칭되는 stack 작성
-    # 방문한 적 없는 경우(matrix[i][j] = False)
-    # 새로운 섬이 등장한 것이므로 cnt += 1
+    # matrix[i][j] = 0 이면 바다가 등장해서 섬이 끊긴 것 cnt += 1
     cnt = 0
     for i in range(h):
         for j in range(w):
             if matrix[i][j]:
                 stack = [(i,j)]
-                matrix[i][j] = False
+                matrix[i][j] = 0
                 cnt += 1
 
                 # 스택이 빌 때까지(돌아갈 곳이 없을 때까지) 반복:
