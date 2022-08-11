@@ -21,5 +21,6 @@ for _ in range(3):
             answer += B*2
         elif time == 3:
             answer += C*3
-            
+
 print(answer)
+
