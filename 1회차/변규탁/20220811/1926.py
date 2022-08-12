@@ -7,19 +7,19 @@ dy = [0, -1, 1, 0]
 
 
 def dfs(i,j):
-    cnt = 1
+    cnt = 0
     stack = [(i,j)]
     if maps[i][j] == 1:
         maps[i][j] = 0
         while stack:
             x, y = stack.pop()
+            cnt += 1
             for d in range(4):
                 nx = x + dx[d]
                 ny = y + dy[d]
                 if 0 <= nx < n and 0 <= ny < m and maps[nx][ny] == 1:
                     maps[nx][ny] = 0
                     stack.append((nx,ny))
-                    cnt += 1
                             
     return cnt
 
