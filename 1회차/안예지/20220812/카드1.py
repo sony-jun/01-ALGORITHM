@@ -13,4 +13,3 @@ while len(cards) != 1:
     
 print(*cards)
 # print(queue[0])
-    

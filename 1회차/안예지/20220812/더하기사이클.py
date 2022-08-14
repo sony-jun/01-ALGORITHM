@@ -1,22 +1,26 @@
 # 1110.
 """
 """
-"""
+"""======================google======================"""
 
-N = input()
-new_ = 0
+n = input()
+num = n
+cnt = 0
 
-while N != str(new_):
-    if len(N) < 2:
-        N = '0' + N
-    new_ = int(N[0]) + int(N[1])
-    if new_ == N:
-        break
-    N = N[1] + str(new_)
+while 1:
+    if len(num) == 1:
+        num = "0" + num
+    plus = int(num[0]) + int(num[1])
+    num = num[-1] + str(plus)[-1]
+    cnt += 1
     
-"""    
-"""============================================"""
+    if num == n:
+        print(cnt)
+        break
 
+     
+"""======================google======================"""
+"""
 N = int(input())    # 입력값
 new_num = N
 cnt = 0
@@ -34,3 +38,4 @@ while True:
     if N == new_num:
         print(cnt)
         break
+"""
