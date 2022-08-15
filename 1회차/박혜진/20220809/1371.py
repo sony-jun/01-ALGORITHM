@@ -6,11 +6,9 @@ alpha = {
     'u' : 0, 'v' : 0, 'w' : 0, 'x' : 0, 'y' : 0, 'z' : 0
 }
 
-# import sys
+import sys
 
-# word = sys.stdin.read().replace('\n', '').replace(' ', '')
-word = input()
-
+word = sys.stdin.read().replace('\n', '').replace(' ', '')
 
 for i in word :
     if i in alpha :
