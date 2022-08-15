@@ -7,7 +7,6 @@
 
 N, M = map(int,(input().split()))
 matrix_ = input().split()
-print(matrix_)
 Max_total = 0
 for i in range(N-2):
     for idx in range(i + 1, N - 1):

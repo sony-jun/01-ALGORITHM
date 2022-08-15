@@ -6,5 +6,6 @@ for i in range(4):
     for idx in range(x_1, x_2):
         for index in range(y_1, y_2):
             matrix_.append([idx,index])
+print(matrix_)
 
-print(len(set(map(tuple, matrix_))))
+print((set(map(tuple, matrix_))))

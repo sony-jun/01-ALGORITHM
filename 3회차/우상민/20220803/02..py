@@ -7,18 +7,19 @@ M = int(input())
 matrix_1 = [[],[],[]]
 
 for i in range(M):
-    num_1, num_2, num_3 = (map(int, input().split()))
+    num_1, num_2, num_3 = (list(input().split()))
     matrix_1[0].append(num_1)
     matrix_1[1].append(num_2)
     matrix_1[2].append(num_3)
 print(matrix_1)
 box = [0] * N
-for idx in range(3):
+for idx in range(N):
     for index in range(M):
         if matrix_1[idx].count(matrix_1[idx][index]) >= 2:
             box[index] += 0
         else:
-            box[index] += matrix_1[idx][index]
+            C = int(matrix_1[idx][index])
+            box[idx] += C
     print(box)
 for b in box:
     print(b)

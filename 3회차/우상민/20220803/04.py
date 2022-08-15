@@ -3,20 +3,27 @@
 
 N, M = 8, 8
 mat = []
+box = []
 count = 0
 for i in range(N):
+    box.append(list(input()))
     for idx in range(M):
         mat.append([i,idx])
-        if i+idx % 2 == 0:
-            if mat == 'F':
+        if box[i][idx] == 'F':
+            if (i+idx) % 2 == 0:
                 count += 1
 
-box = []
 
-for a in range(N):
-    box.append(input().split())
-
-
-print(mat)
-print(box)
+# print(mat)
+# print(box)
+print(count)
     
+
+# .F.F...F
+# F...F.F.
+# ...F.F.F
+# F.F...F.
+# .F...F..
+# F...F.F.
+# .F.F.F.F
+# ..FF..F.
