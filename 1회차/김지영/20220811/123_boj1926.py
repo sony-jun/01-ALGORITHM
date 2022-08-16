@@ -1,38 +1,43 @@
-# 1926번: 그림
-
 import sys
 sys.stdin = open('1926.txt')
 
-dx = [1, -1, 0, 0]
 dy = [0, 0 ,1, -1]
-
-def dfs(x,y):
-    global cnt
-    cnt += 1
-    graph[x][y] = 0
-    for i in range(4):
-        nx = x + dx[i]
-        ny = y + dy[i]
-        if -1 < nx < n and -1 < ny < m and graph[nx][ny] == 1:
-            print(nx,ny)
-            dfs(nx, ny)
-
+dx = [1, -1, 0, 0]
+   
 # 입력 받기
 n, m = map(int,input().split())
 graph = [list(map(int, input().split())) for _ in range(n)]
-
-# main
-num_list = []
-for i in range(n):
-    for j in range(m):
-        if graph[i][j] == 1:
-            cnt = 0 # count init
-            dfs(i,j)
-            num_list.append(cnt)
-
-
-if len(num_list):
-    print(len(num_list))
-    print(max(num_list))
-else:
-    print('0\n0')
+visited = [[False]*m for _ in range(n)]
+cnt = 0
+painting_size_list = []
+for sy in range(n):
+    for sx in range(m):
+        if not visited[sy][sx] and graph[sy][sx] == 1:
+            stack = []
+            stack.append((sy,sx))
+            visited[sy][sx] = True
+            
+            cnt += 1
+            # 그림의 넓이? = pop횟수
+            painting_size = 0
+            while len(stack) != 0:
+                y,x = stack.pop()
+                painting_size += 1
+                for i in range(4):
+                    nx = x + dx[i]
+                    ny = y + dy[i]
+                    if not (-1 < ny < n and -1 < nx < m):
+                        continue
+                    if visited[ny][nx] == True:
+                        continue
+                    if graph[ny][nx] != 1:
+                        continue
+                    if -1 < ny < n and -1 < nx < m :
+                        stack.append((ny,nx))
+                        y = ny
+                        x = nx
+                painting_size_list.append(painting_size)
+if len(painting_size_list) != 0:
+    print(painting_size_list)
+    print(cnt)
+else : print('0\n0')

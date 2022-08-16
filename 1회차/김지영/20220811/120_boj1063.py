@@ -52,6 +52,7 @@ for _ in range(int(n)):
         ky = nky
         kx = nkx
 
+# 인덱스 변환 원상복구~
 def get_key(value):
     for k,v in alpha.items():
         if v == value:
