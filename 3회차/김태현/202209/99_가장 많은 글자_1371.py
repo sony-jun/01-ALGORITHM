@@ -1,6 +1,8 @@
 import sys
 sys.stdin = open("99_가장 많은 글자_1371.txt", "r")
 
+import sys
+
 lines = sys.stdin.read()
 data = [0] * 26
 
