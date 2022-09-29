@@ -1,4 +1,12 @@
 # https://www.acmicpc.net/problem/2908
-import sys
+a , b = map(int , input().split())
 
-sys.stdin = open("1_상수.txt")
+y = str(a)
+y = y[::-1]
+x = str(b)
+x = x[::-1]
+
+if int(x) > int(y) :
+    print(x)
+else:
+    print(y)
