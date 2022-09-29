@@ -19,7 +19,7 @@ output = str(_sum)[::-1]
 
 # output = str(_sum)
 
-cnt = 0
+cnt = -1
 
 while True:
     cnt+=1
