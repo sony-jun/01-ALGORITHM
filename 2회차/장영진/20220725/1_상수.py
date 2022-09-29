@@ -1,4 +1,9 @@
-# https://www.acmicpc.net/problem/2908
-import sys
+a, b = input().split()
 
-sys.stdin = open("1_상수.txt")
+r_a = int(a[::-1])
+r_b = int(b[::-1])
+
+if r_a > r_b:
+    print(r_a)
+else:
+    print(r_b)
